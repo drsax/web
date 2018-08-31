@@ -1,175 +1,92 @@
 <!DOCTYPE html>
 <html>
-<title>Dr.Hong</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
-body {font-family: "Open Sans"}
-</style>
-<body class="w3-light-grey">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<body>
 
-<!-- Navigation bar with social media icons -->
-<div class="w3-bar w3-black w3-hide-small">
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-home"></i></a>
-  <a href="cv.html" class="w3-bar-item w3-button"><i class="fa fa-address-card-o"></i></a>
-  <a href="paper.html" class="w3-bar-item w3-button"><i class="fa fa-file-pdf-o"></i></a>
-  <a href="port.html" class="w3-bar-item w3-button"><i class="fa fa-briefcase"></i></a>
-  <a href="webapp.html" class="w3-bar-item w3-button"><i class="fa fa-chrome"></i></a>
-  <a href="music.html" class="w3-bar-item w3-button"><i class="fa fa-music"></i></a>
-  <a href="vd.html" class="w3-bar-item w3-button"><i class="fa fa-youtube-play"></i></a>
-  <a href="dr.html" class="w3-bar-item w3-button"><i class="fa fa-graduation-cap"></i></a>
-
-</div>
-
-<!-- w3-content defines a container for fixed size centered content,
-and is wrapped around the whole page content, except for the footer in this example -->
-<div class="w3-content" style="max-width:1600px">
-
-  <!-- Header -->
-  <header class="w3-container w3-center w3-padding-12 w3-white">
-    <h1 class="w3-xxxlarge"><b>Dr.Hong </b></h1>
-    <h6>Welcome to the my <span class="w3-tag">Web page</span></h6>
-  </header>
-
-  <!-- Image header -->
-  <header class="w3-display-container w3-wide" id="home">
-    <img class="w3-image" src="jp.jpg" alt="Fashion Blog" width="1200" >
-    <div class="w3-display-left w3-padding-large">
-      <h1 class="w3-text-white">Dr.Hong's</h1>
-      <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Web Page</b></h1>
-      <h6><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off">Good</button></h6>
-    </div>
-  </header>
-
-  <!-- Grid -->
-  <div class="w3-row w3-padding w3-border">
-
-    <!-- Blog entries -->
-    <div class="w3-col l8 s12">
-
-      <!-- Blog entry -->
-      <div class="w3-container w3-white w3-margin w3-padding-large">
-        <div class="w3-center">
-          <h3>Keep going .... </h3>
-          <h5>I Have a Dream, <span class="w3-opacity">May 2, 2018</span></h5>
-        </div>
-
-        <div class="w3-justify">
-          <img src="/w3images/girl_hat.jpg" alt="Girl Hat" style="width:100%" class="w3-padding-16">
-          <p><strong>More Hats!</strong> I am crazy about hats these days. Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor
-            magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sedtellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-          <p class="w3-left"><button class="w3-button w3-white w3-border"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
-          <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo1')" id="myBtn"><b>- Dr.Hong -</b> <span class="w3-tag w3-white"></span></button></p>
-          <p class="w3-clear"></p>
-          <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
-            <hr>
-              <div class="w3-col l2 m3">
-                <img src="/w3images/avatar_smoke.jpg" style="width:90px;">
-              </div>
-              <div class="w3-col l10 m9">
-                <h4>George <span class="w3-opacity w3-medium">May 3, 2015, 6:32 PM</span></h4>
-                <p>Great blog post! Following</p>
-              </div>
-          </div>
-        </div>
-      </div>
-      <hr>
-
-
-    <!-- END BLOG ENTRIES -->
-    </div>
-
-    <!-- About/Information menu -->
-    <div class="w3-col l4">
-      <!-- About Card -->
-      <div class="w3-white w3-margin">
-        <img src="a.jpg" alt="Jane" style="width:100%" class="w3-grayscale">
-        <div class="w3-container w3-black">
-          <h4>Euy Shick Hong</h4>
-          <p>Software engineer, Interactive Web Application, Physical computing, Interactive Music System, AI, Saxophone </p>
-        </div>
-      </div>
-      <hr>
-
-      <!-- Posts -->
-      <div class="w3-white w3-margin">
-        <div class="w3-container w3-padding w3-black">
-          <h4>Popular Posts</h4>
-        </div>
-        <ul class="w3-ul w3-hoverable w3-white">
-          <li class="w3-padding-16">
-            <img src="/w3images/avatar_smoke.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-            <span class="w3-large">Denim</span>
-            <br>
-            <span>Sed mattis nunc</span>
-          </li>
-
-        </ul>
-      </div>
-      <hr>
-
-      <!-- Tags -->
-      <div class="w3-white w3-margin">
-        <div class="w3-container w3-padding w3-black">
-          <h4>Navigation</h4>
-        </div>
-        <div class="w3-container w3-white">
-          <p>
-            <span class="w3-tag w3-black w3-margin-bottom">CV</span>
-            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Papers</span>
-            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Works</span>
-            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Wep App</span>
-            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Music</span>
-            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Video</span>
-          </p>
-        </div>
-      </div>
-      <hr>
-
-      <div class="w3-white w3-margin">
-        <div class="w3-container w3-padding w3-black">
-          <h4>Contact</h4>
-        </div>
-        <div class="w3-container w3-xlarge w3-padding">
-            antaresax@naver.com
-        </div>
-      </div>
-      <hr>
-
-    <!-- END About/Intro Menu -->
-    </div>
-
-  <!-- END GRID -->
+<!-- Navigation -->
+<nav>
+  <ul class="w3-navbar w3-black">
+    <li><a>Home</a></li>
+    <!--<li><a href="http://drsax.github.io/index3.html" target="_blank">Dr.Hong</a></li> -->
+    <li><a href="https://drsax.github.io/website/index.html" target="_blank">Dr.Hong</a></li>
+    <li><a href="https://webaudiojs.github.io/app/" target="_blank">DrSax.js works</a></li>
+    <li><a href="https://drsax.github.io/DrSAX/web_works.html" target="_blank">Web works</a></li>
+    <li><a href="http://antaresax.cafe24.com/cube.1.6.html" target="_blank">Cube</a></li>
+    <li><a href="https://drsax.github.io/DrSAX/slide.html" target="_blank">Resume</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="w3-bar w3-black">
+    <a href="/page/cv.html" class="w3-bar-item w3-button"><i class="fa fa-file-word-o"></i></a>
+    <a href="/page/paper.html" class="w3-bar-item w3-button"><i class="fa fa-file-pdf-o"></i></a>
+    <a href="/page/port.html" class="w3-bar-item w3-button"><i class="fa fa-briefcase"></i></a>
+    <a href="/page/webapp.html" class="w3-bar-item w3-button"><i class="fa fa-chrome"></i></a>
+    <a href=/page/"music.html" class="w3-bar-item w3-button"><i class="fa fa-music"></i></a>
+    <a href="/page/vd.html" class="w3-bar-item w3-button"><i class="fa fa-youtube-play"></i></a>
+    <a href="/page/dr.html" class="w3-bar-item w3-button"><i class="fa fa-graduation-cap"></i></a>
   </div>
+</nav>
 
-<!-- END w3-content -->
-</div>
+<!-- Slide Show -->
+<section>
+  <img class="mySlides" src="img/webxophone.jpg"
+  style="width:100%">
+  <img class="mySlides" src="img/dreffect.jpg"
+  style="width:100%">
+  <img class="mySlides" src="img/monet2.jpg"
+  style="width:100%">
+</section>
+
+<!-- Band Description -->
+<section class="w3-container w3-center w3-content" style="max-width:600px">
+  <h2 class="w3-wide">WEB APPLICATION</h2>
+  <p class="w3-opacity"><i>I love works on the web technology</i></p>
+  <p class="w3-justify">Euy Shick Hong  is a researcher in the The Laboratory of Musical ARt and TEchnology(MARTE).
+Enthusiastically,  He is trying to study in the art of computer music that researching programming and interactive web application for music, interaction design, novel mobile web music, integrated musical interface design for real instrument, sound visualization(real instrument), physical computing with arduino, interactive networking system on the web and playing the saxophone.</p>
+</section>
 
 
 <!-- Footer -->
-<footer class="w3-container w3-dark-grey" style="padding:32px">
-  <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <p>Powered by <a>Dr.Hong</a></p>
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+
+  <div class=" w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact Me</h2>
+
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Seoul, KOREA</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +82 10 8353 2784</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: antaresax@gmail.com</p>
+    </div>
+
+  <a href="#"><i class="fa fa-facebook-official"></i></a>
+  <a href="#"><i class="fa fa-pinterest-p"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-flickr"></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+  <p class="w3-medium">
+  Powered by <p>Euy Shick Hong</p>
+  </p>
 </footer>
 
 <script>
-// Toggle between hiding and showing blog replies/comments
-document.getElementById("myBtn").click();
-function myFunction(id) {
-    var x = document.getElementById(id);
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
 
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000);
+}
 </script>
 
 </body>
