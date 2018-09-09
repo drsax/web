@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery.hotkeys@0.1.0/jquery.hotkeys.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <body>
 
@@ -13,12 +13,12 @@
 <nav>
   <ul class="w3-navbar w3-black">
     <li><a>Home</a></li>
-    <!--<li><a href="http://drsax.github.io/index3.html" target="_blank">Dr.Hong</a></li> -->
-    <li><a href="https://drsax.github.io/website/index.html" target="_blank">Dr.Hong</a></li>
-    <li><a href="https://webaudiojs.github.io/app/" target="_blank">DrSax.js works</a></li>
-    <li><a href="https://drsax.github.io/DrSAX/web_works.html" target="_blank">Web works</a></li>
-    <li><a href="http://antaresax.cafe24.com/cube.1.6.html" target="_blank">Cube</a></li>
-    <li><a href="https://drsax.github.io/DrSAX/slide.html" target="_blank">Resume</a></li>
+    <li id="nav_list"><a href="http://drsax.github.io/index3.html" target="_blank">Dr.Hong</a></li>
+    <li id="nav_list1"><a href="https://drsax.github.io/website/index.html" target="_blank">Dr.Hong_old</a></li>
+    <li id="nav_list2"><a href="https://webaudiojs.github.io/app/" target="_blank">DrSax.js works</a></li>
+    <!-- <li><a href="https://drsax.github.io/DrSAX/web_works.html" target="_blank">Web works</a></li> -->
+    <li id="nav_list3"><a href="http://antaresax.cafe24.com/cube.1.6.html" target="_blank">Cube</a></li>
+    <li id="nav_list3"><a href="https://drsax.github.io/DrSAX/slide.html" target="_blank">Resume</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="w3-bar w3-black">
@@ -28,7 +28,7 @@
     <!-- <a href="page/port.html" class="w3-bar-item w3-button" target="_blank"><i class="fa fa-chrome"></i></a> -->
     <a href="page/music.html" class="w3-bar-item w3-button" target="_blank"><i class="fa fa-music"></i></a>
     <!-- <a href="page/vd.html" class="w3-bar-item w3-button" target="_blank"><i class="fa fa-youtube-play"></i></a> -->
-    <a href="page/dr.html" class="w3-bar-item w3-button" target="_blank"><i class="fa fa-graduation-cap"></i></a>
+    <a href="https://webaudiojs.github.io/app/" class="w3-bar-item w3-button" target="_blank"><i class="fa fa-graduation-cap"></i></a>
   </div>
 </nav>
 
@@ -75,21 +75,49 @@ Enthusiastically,  He is trying to study in the art of computer music that resea
 </footer>
 
 <script>
-// Automatic Slideshow - change image every 3 seconds
-var myIndex = 0;
-carousel();
-
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";
+    // Automatic Slideshow - change image every 3 seconds
+    var myIndex = 0;
+    carousel();
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}
+        x[myIndex-1].style.display = "block";
+        setTimeout(carousel, 3000);
     }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}
-    x[myIndex-1].style.display = "block";
-    setTimeout(carousel, 3000);
-}
+
+
+    $(document).ready(function(){
+        $("#nav_list").hide();
+        $("#nav_list1").hide();
+        $("#nav_list2").hide();
+        $("#nav_list3").hide();
+        $("#nav_list4").hide();
+        $("#nav_list5").hide();
+        $(document).keypress(function(e){
+            if (e.keyCode === 72){
+                $("#nav_list").show();
+                $("#nav_list1").show();
+                $("#nav_list2").show();
+                $("#nav_list3").show();
+                $("#nav_list4").show();
+                $("#nav_list5").show();
+            }
+            if (e.keyCode === 71){
+                $("#nav_list").hide();
+                $("#nav_list1").hide();
+                $("#nav_list2").hide();
+                $("#nav_list3").hide();
+                $("#nav_list4").hide();
+                $("#nav_list5").hide();
+            }
+
+        });
+    });
 </script>
 
 </body>
