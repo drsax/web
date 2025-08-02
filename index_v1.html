@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<body>
+
+<!-- Navigation -->
+<nav>
+  <ul class="w3-navbar w3-black">
+    <li><a>Home</a></li>
+    <li id="nav_list"><a href="http://drsax.github.io/index3.html" target="_blank">Dr.Hong</a></li>
+    <li id="nav_list1"><a href="https://drsax.github.io/website/index.html" target="_blank">Dr.Hong_old</a></li>
+    <li id="nav_list2"><a href="https://webaudiojs.github.io/app/" target="_blank">DrSax.js works</a></li>
+    <!-- <li><a href="https://drsax.github.io/DrSAX/web_works.html" target="_blank">Web works</a></li> -->
+    <li id="nav_list3"><a href="http://antaresax.cafe24.com/cube.1.6.html" target="_blank">Cube</a></li>
+    <li id="nav_list4"><a href="https://drsax.github.io/DrSAX/slide.html" target="_blank">Resume</a></li>
+    <li id="nav_list5"><a href="https://drwebsax.github.io/defense" target="_blank">defense</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="w3-bar w3-black">
+    <a href="page/cv.html" class="w3-bar-item w3-button" target="_blank"><i class="fa fa-file-word-o"></i></a>
+    <a href="page/paper.html" class="w3-bar-item w3-button" target="_blank"><i class="fa fa-file-pdf-o"></i></a>
+    <a href="page/works.html" class="w3-bar-item w3-button" target="_blank"><i class="fa fa-briefcase"></i></a>
+    <!-- <a href="page/port.html" class="w3-bar-item w3-button" target="_blank"><i class="fa fa-chrome"></i></a> -->
+    <a href="page/music.html" class="w3-bar-item w3-button" target="_blank"><i class="fa fa-music"></i></a>
+    <!-- <a href="page/vd.html" class="w3-bar-item w3-button" target="_blank"><i class="fa fa-youtube-play"></i></a> -->
+    <a href="https://webaudiojs.github.io/app/" class="w3-bar-item w3-button" target="_blank"><i class="fa fa-graduation-cap"></i></a>
+  </div>
+</nav>
+
+<!-- Slide Show -->
+<section>
+  <img class="mySlides" src="img/webxophone.jpg"
+  style="width:100%">
+  <img class="mySlides" src="img/dreffect.jpg"
+  style="width:100%">
+  <img class="mySlides" src="img/monet2.jpg"
+  style="width:100%">
+</section>
+
+<!-- Band Description -->
+<section class="w3-container w3-center w3-content" style="max-width:600px">
+  <h2 class="w3-wide">Dr.Hong</h2>
+  <p class="w3-opacity"><i>Computer Technology & Interactive music </i></p>
+  <p class="w3-justify">Euy Shick Hong  is a researcher in the The Laboratory of Musical ARt and TEchnology(MARTE).
+Enthusiastically,  He is trying to study in the art of computer music that researching programming and interactive web application for music, interaction design, novel mobile web music, integrated musical interface design for real instrument, sound visualization(real instrument), physical computing with arduino, interactive networking system on the web and playing the saxophone.</p>
+</section>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+
+  <div class=" w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact Me</h2>
+
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Seoul, KOREA</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +82 10 8353 2784</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: antaresax@gmail.com</p>
+    </div>
+
+  <a href="#"><i class="fa fa-facebook-official"></i></a>
+  <a href="#"><i class="fa fa-pinterest-p"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-flickr"></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+  <p class="w3-medium">
+  Powered by <p>Euy Shick Hong</p>
+  </p>
+</footer>
+
+<script>
+    // Automatic Slideshow - change image every 3 seconds
+    var myIndex = 0;
+    carousel();
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}
+        x[myIndex-1].style.display = "block";
+        setTimeout(carousel, 3000);
+    }
+
+
+    $(document).ready(function(){
+        $("#nav_list").hide();
+        $("#nav_list1").hide();
+        $("#nav_list2").hide();
+        $("#nav_list3").hide();
+        $("#nav_list4").hide();
+        $("#nav_list5").hide();
+        $(document).keypress(function(e){
+            if (e.keyCode === 72){
+                $("#nav_list").show();
+                $("#nav_list1").show();
+                $("#nav_list2").show();
+                $("#nav_list3").show();
+                $("#nav_list4").show();
+                $("#nav_list5").show();
+            }
+            if (e.keyCode === 71){
+                $("#nav_list").hide();
+                $("#nav_list1").hide();
+                $("#nav_list2").hide();
+                $("#nav_list3").hide();
+                $("#nav_list4").hide();
+                $("#nav_list5").hide();
+            }
+
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Saxophonist DrHong</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url("../img/v.jpg");
+  min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("../img/ddh.jpg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("../img/gb.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 300px;
+  }
+}
+
+/* img {
+filter: grayscale(100%);
+} */
+
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#album" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ALBUM</a>
+    <a href="#photo" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PHOTO</a>
+    <a href="#schedule" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> SCHEDULE</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#album" class="w3-bar-item w3-button" onclick="toggleFunction()">ALBUM</a>
+    <a href="#photo" class="w3-bar-item w3-button" onclick="toggleFunction()">PHOTO</a>
+    <a href="#schedule" class="w3-bar-item w3-button" onclick="toggleFunction()">SCHEDULE</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">I am <span class="w3-hide-small">a Saxophonist and</span> DrHong</span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">ABOUT ME</h3>
+  <p class="w3-center"><em>I love Jazz and Blues </em></p>
+  <p>         Saxophonist Dr. Hong studied jazz saxophone at Delta Community Music School in Canadan and got a Doctor of Musical Art In Computer Music (D.M.A) at Dongguk University,
+    Master of Computer Engineering (M.C.E) at Yonsei University,
+    Master of Music In Computer Music (M.M) at Dongguk University.
+    He was also invited as a Visiting Scholar to Plymouth University in UK.<br/>
+  
+    Various experiences through jam sessions with jazz clubs in Canada and 
+    visiting scholars in the UK and became the motive for creating songs.
+    He has already released various albums and is trying to express his own unique color with
+    Jazz, funky, pop, contemporary music based on blues</p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fa fa-user w3-margin-right"></i>WHO I am? </b></p><br>
+      <img src="../img/3.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <pre>
+        2002 Korea/Japan World Cup
+        2002 Asian Game
+        2004 Delta community music school, Canada
+        2004 Yale Bluse Club Jam Session in Canada
+        2006 Korea pops orchestra
+        2009 Seeing Sound,Listening image
+        2009 Jarasum Jazz Festival
+        2009 Resonation : telematic interactive networking concert 
+             at San Diego and New York in USA, Banff and Alberta in CANADA, 
+             Belfast and Northern Ireland in UK.
+        2010 Jarasum Jazz Festival
+        2010 T-OK ALBUM SAXOPHONE Session
+        2010 "Spirit"  Seeing Sound,Listening image
+        2011 "endure"  Seeing Sound,Listening image
+        2012, 2013 Gail storm Session
+        2012 Seeing Sound,Listening image
+        2013 Interactive performance "out of sight" 
+        2013 "Sonic illutsion"
+        2013 "Arirang" Seeing Sound,Listening image
+        2014 "혼잣말" Seeing Sound,Listening image
+        2014 Blues Album Session
+        2014  Korean traditional music broadcast
+        2015 "Arirang Second Story" Seeing Sound,Listening image
+        2015 "White night" Seeing Sound,Listening image
+        2023 Canada, Toronto "Bistro, Rex Club"
+
+        ... more
+        </pre>
+    </div>
+  </div>
+  <!-- <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
+  <p class="w3-wide"><i class="fa fa-camera"></i>Photography</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-photo"></i>Photoshop</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+  </div> -->
+</div>
+
+<div class="w3-row w3-center w3-dark-grey w3-padding-16">
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">25+</span><br>
+    Saxophone
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">9+</span><br>
+    Album
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">500+</span><br>
+    Concert / Recording
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">1+</span><br>
+    Book
+  </div>
+</div>
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min" >
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="album" >
+  <h3 class="w3-center">MY ALBUM</h3>
+  <p class="w3-center"><em>Here are some of my latest music work so far.<br> Click on the images to make them bigger</em></p><br>
+
+
+   <!-- !PAGE CONTENT! -->
+   <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:10px;">
+
+    <!-- First Photo Grid-->
+    <div class="w3-row-padding w3-padding-16 w3-center" >
+      <div class="w3-quarter">
+        <img src="./../img/drsaxa.jpg" alt="Forest of owl" style="width:90%">
+        <p>2024 album </br> "Arirang Second Story with Dr.Saxophone"</p>
+        <p>Title : Arirang Second Story with Dr.Saxophone</br>
+            released : 2024. 05. 26 </br>
+            concept : Interactive music </br>
+            Instruments : Alto saxo</br>
+            All song by Euy shick, Hong</p>
+      </div>
+
+    </div>
+
+    <!-- First Photo Grid-->
+    <div class="w3-row-padding w3-padding-16 w3-center" >
+      <div class="w3-quarter">
+        <img src="./../img/gg.jpg" alt="Forest of owl" style="width:90%">
+        <p>2015 album </br> "Forest of owl"</p>
+        <p>Title : Forest of owl</br>
+            released : 2015. 09. 30 </br>
+            concept : Interactive music </br>
+            Instruments : Alto saxo, Guitar </br>
+            All song by Euy shick, Hong</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="./../img/ff.jpg" alt="Arirang second story" style="width:90%">
+        <p>2015 album </br> "Arirang second story"</p>
+        <p>Title : Arirang second story </br>
+          released : 2015. 08. 27 </br>
+          concept : Interactive music </br>
+          Instruments : Tea-pyoung-so, Guitar </br>
+          All song by Euy shick, Hong
+      </p>
+      </div>
+      <div class="w3-quarter">
+        <img src="./../img/ee.jpg" alt= "Arirang"style="border:1px solid;width:90%">
+        <p> 2014 album </br> "Arirang"</p>
+        <p>
+          Title : Arirang </br>
+          released : 2014. 03. 28 </br>
+          concept : Interactive music </br>
+          Instruments : Tea-pyoung-so </br>
+          Arranged by Euy shick, Hong </br>
+      </p>
+      </div>
+      <div class="w3-quarter">
+        <img src="./../img/dd.jpg" alt="Interaktive" style="width:90%">
+        <p>2011 interactive album </br> "Interaktive"</p>
+        <p>
+          Title : Interaktive </br>
+          released : 2011. 11. 07 </br>
+          concept : Interactive music </br>
+          Instruments : Alto saxophone </br>
+          All song by Euy shick, Hong </br>
+      </p>
+      </div>
+    </div>
+
+    <!-- Second Photo Grid-->
+    <div class="w3-row-padding w3-padding-16 w3-center">
+      <div class="w3-quarter">
+        <img src="./../img/bg.jpg" alt="blue garlic" style="width:90%">
+        <p>2011 blues album </br> "blue garlic"</p>
+        <p>Title : blue garlic </br>
+          released : 2011. 08. 01 </br>
+          concept : blues </br>
+          Instruments : Alto saxophone</br>
+          All song by Euy shick, Hong
+        </p>
+      </div>
+      <div class="w3-quarter">
+        <img src="./../img/cc.jpg" alt="butter fry" style="width:90%">
+        <p>2011 interactive album </br> "butter fry"</p>
+        <p>
+          Title : butter fry </br>
+          released : 2011. 02. 10 </br>
+          concept : Interactive music </br>
+          Instruments : Alto saxophone </br>
+          All song by Euy shick, Hong
+        </p>
+      </div>
+      <div class="w3-quarter">
+        <img src="./../img/bb.jpg" alt="Sandwich" style="width:90%">
+        <p>2010 1st album </br> "Do you like apple?"</p>
+        <p>
+            Title : Do you like apple?  </br>
+            released : 2010. 06. 18 </br>
+            concept : Jazz, sound effects </br>
+            Instruments : Alto saxophone </br>
+            All song by Euy shick, Hong</br>
+      </p>
+      </div>
+      <div class="w3-quarter">
+        <img src="./../img/aa.jpg" alt="Croissant" style="width:90%">
+        <p>2009 Solo album "Dr.Hong"</p>
+        <p>Title : Dr.Hong </br>
+          released : 2009. 09. 17</br>
+          concept : Jazz, blues, Funky</br>
+          Instruments : Alto saxophone </br>
+          All song by Euy shick, Hong</p>
+      </div>
+    </div>
+
+
+  <!-- End page content -->
+  </div>
+
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="photo">
+    <h2 class="">My Photos</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <!-- Grid for photos -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <img src="../img/d.jpg" style="width:30%">
+        <img src="../img/ddh.jpg" style="width:30%">
+        <img src="../img/bgarlic.jpg" style="width:30%">
+      </div>
+
+      <div class="w3-half">
+        <img src="../img/dw2.jpg" style="width:30%">
+        <img src="../img/ddd.jpg" style="width:30%">
+        <img src="../img/dddk.jpg" style="width:30%">
+      </div>
+
+      <div class="w3-half">
+        <img src="../img/gb.jpg" style="width:30%">
+        <img src="../img/gfd.jpg" style="width:30%">
+        <img src="../img/ggj.jpg" style="width:30%">
+      </div>
+
+      <div class="w3-half">
+        <img src="../img/ddh.jpg" style="width:30%">
+        <img src="../img/cc.jpg" style="width:30%">
+        <img src="../img/eb.jpg" style="width:30%">
+      </div>
+
+      <div class="w3-half">
+        <img src="../img/eee.jpg" style="width:30%">
+        <img src="../img/eeh.jpg" style="width:30%">
+        <img src="../img/ert.jpg" style="width:30%">
+      </div>
+
+      <div class="w3-half">
+        <img src="../img/ev.jpg" style="width:30%">
+        <img src="../img/fv.jpg" style="width:30%">
+        <img src="../img/ffj.jpg" style="width:30%">
+      </div>
+
+      <div class="w3-half">
+        <img src="../img/gfd.jpg" style="width:30%">
+        <img src="../img/ggf.jpg" style="width:30%">
+        <img src="../img/ggj.jpg" style="width:30%">
+      </div>
+
+      <div class="w3-half">
+        <img src="../img/qqq.jpg" style="width:30%">
+        <img src="../img/qq.jpg" style="width:30%">
+        <img src="../img/qn.jpg" style="width:30%">
+      </div>
+
+      <div class="w3-half">
+        <img src="../img/r.jpg" style="width:30%">
+        <img src="../img/rb.jpg" style="width:30%">
+        <img src="../img/rcee.jpg" style="width:30%">
+      </div>
+
+      <div class="w3-half">
+        <img src="../img/rre.jpg" style="width:30%">
+        <img src="../img/rrr.jpg" style="width:30%">
+        <img src="../img/s.jpg" style="width:30%">
+      </div>
+
+      <div class="w3-half">
+        <img src="../img/t.jpg" style="width:30%">
+        <img src="../img/tb.jpg" style="width:30%">
+        <img src="../img/rcee.jpg" style="width:30%">
+      </div>
+
+      <div class="w3-half">
+        <img src="../img/tjt.jpg" style="width:30%">
+        <img src="../img/tm.jpg" style="width:30%">
+        <img src="../img/tth.jpg" style="width:30%">
+      </div>
+
+      <div class="w3-half">
+        <img src="../img/ttt.jpg" style="width:30%">
+        <img src="../img/tyu.jpg" style="width:30%">
+        <img src="../img/u.jpg" style="width:30%">
+      </div>
+
+      
+      <div class="w3-half">
+        <img src="../img/uiu.jpg" style="width:30%">
+        <img src="../img/uku.jpg" style="width:30%">
+        <img src="../img/uu.jpg" style="width:30%">
+      </div>
+
+      
+      <div class="w3-half">
+        <img src="../img/uuk.jpg" style="width:30%">
+        <img src="../img/v.jpg" style="width:30%">
+        <img src="../img/w.jpg" style="width:30%">
+      </div>
+
+      <div class="w3-half">
+        <img src="../img/wc.jpg" style="width:30%">
+        <img src="../img/whw.jpg" style="width:30%">
+        <img src="../img/ws.jpg" style="width:30%">
+      </div>
+
+      <div class="w3-half">
+        <img src="../img/ww.jpg" style="width:30%">
+        <img src="../img/wwf.jpg" style="width:30%">
+        <img src="../img/wy.jpg" style="width:30%">
+      </div>
+
+      <div class="w3-half">
+        <img src="../img/x.jpg" style="width:30%">
+        <img src="../img/xxx.jpg" style="width:30%">
+        <img src="../img/yky.jpg" style="width:30%">
+      </div>
+
+      <div class="w3-half">
+        <img src="../img/yy.jpg" style="width:30%">
+        <img src="../img/yye.jpg" style="width:30%">
+        <img src="../img/yyj.jpg" style="width:30%">
+      </div>
+    <!-- End photo grid -->
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
+
+
+  <!-- Schedule Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="schedule">
+    <h2 class="">Schedule</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p class ="googleId" align="middle">
+      <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FSeoul&bgcolor=%23ffffff&src=ZHJob25nLmpzQGdtYWlsLmNvbQ&color=%23039BE5" style="border:solid 1px #777" width="380" height="400" frameborder="0" scrolling="no">
+      </iframe>
+    </p>
+  </div>
+
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <h3 class="w3-center">WHERE I WORK</h3>
+    <p class="w3-center"><em>I'd love your feedback!</em></p>
+    <!-- <div class="w3-col m4 w3-container">
+      <img src="/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
+    </div> -->
+    <div class="w3-col m8 w3-panel" id="contact">
+      <div class="w3-section">
+        <h2 class="">Contact Me</h2>
+        <hr style="width:200px" class="w3-opacity">
+        <!-- <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Seoul, Korea</p>
+        <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: email</p> -->
+        <p><i class="fa fa-envelope fa-fw  w3-xxlarge w3-margin-right"> </i> Email: drhong.js@gmail.com</p>
+        <a href="https://www.instagram.com/drhongjazz/" target="_blank"> <i class="fa fa-instagram fa-fw  w3-xxlarge w3-margin-right" style="font-size:36px"></i>https://www.instagram.com/drhongjazz/ </a>
+        <br>
+        <a href="https://www.youtube.com/@DrHongOfficial" target="_blank"> <i class="fa fa-youtube-play fa-fw  w3-xxlarge w3-margin-right" style="font-size:36px"></i>https://www.youtube.com/@DrHongOfficial </a>
+      </div><br>
+      <p>Let's get in touch. Send me a message:</p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <a href=" https://drhon9-note.blogspot.com/" target="_blank"> ©2024 Drhong</a>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>

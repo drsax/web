@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>DrHong</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="./style/dr.css?"> -->
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>document.write('<link rel="stylesheet" href="./style/dr.css?check=' + Date.now() + '">');</script>
+    <script>document.write('<script src="../js/Dr.InitSet.js?check=' + Date.now() + '"><\/script>');</script>
+    <script>document.write('<script src="../js/Dr.Api.js?check=' + Date.now() + '"><\/script>');</script>
+    <script>document.write('<script src="../js/os.js?check=' + Date.now() + '"><\/script>');</script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+
+</head>
+  <style>
+    body, h1,h2,h3,h4,h5,h6 {font-family:"Montserrat", sans-serif;}
+    .w3-row-padding img {margin-bottom: 12px}
+    /* Set the width of the sidebar to 120px */
+    .w3-sidebar {width: 120px;background: #222;}
+    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+    #main {margin-left: 120px}
+    /* Remove margins from "page content" on small screens */
+    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+    .googleId {
+      position: relative;
+      padding-top: 56%;
+      width: 100%;
+      height: 0;
+      margin-bottom: 200px;
+    }
+
+    .video-wrap {margin: 50px; position:relative; padding-bottom:56.25%; padding-top:30px; height:0; overflow:hidden; }
+    .video-wrap iframe,
+    .video-wrap object,
+    .video-wrap embed {position:absolute; top:0; left:0; width:100%; height:100%;}
+    .margin0 {
+      margin: 25px 0 !important
+    }
+
+    .insta { margin: 0 auto !important}
+
+   #img{
+    filter: grayscale(1);
+   }
+
+    /* iframe */
+    .googleId > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      min-height: 500px;
+    }
+  </style>
+    </head>
+    <body class="w3-black">
+    
+    <!-- Icon Bar (Sidebar - hidden on small screens) -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+      <!-- Avatar image in top left corner -->
+      <img src="../img/drhong.jpg" style="width:100%">
+      <a href="" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-home w3-xxlarge"></i>
+        <p class="w3-text-blue">HOME</p>
+      </a>
+      <a href="#music" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class='fa fa-headphones w3-xxlarge'></i>
+        <p class="w3-text-blue">MUSIC</p>
+      </a>
+      <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class='fa fa-camera w3-xxlarge'></i>
+        <p class="w3-text-blue">PHOTOS</p>
+      </a>
+      <a href="#schedule" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class='fa fa-calendar w3-xxlarge'></i>
+        <p class="w3-text-blue">SCHEDULE</p>
+      </a>
+      <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-envelope w3-xxlarge"></i>
+        <p class="w3-text-blue" >CONTACT</p>
+      </a>
+    </nav>
+    
+    <!-- Navbar on small screens (Hidden on medium and large screens) -->
+    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+      <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+        <a href="" class="w3-bar-item w3-button w3-text-blue" style="width:25% !important">HOME</a>
+        <a href="#music" class="w3-bar-item w3-button w3-text-blue" style="width:25% !important">MUSIC</a>
+        <a href="#photos" class="w3-bar-item w3-button w3-text-blue" style="width:25% !important">PHOTOS</a>
+        <a href="#schedule" class="w3-bar-item w3-button w3-text-blue" style="width:25% !important">SCHEDULE</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-text-blue" style="width:25% !important">CONTACT</a>
+      </div>
+    </div>
+    
+    <!-- Page Content -->
+    <div class="w3-padding-large" id="main">
+      <!-- Header/Home -->
+      <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+        <!-- <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Dr.Hong</h1>
+        <p>Saxophonist and Musician.</p> -->
+        <img src="../img/drhong.jpg" alt="boy" class="w3-image" width="1200" height="1200" id="img">
+      </header>
+    
+      <!-- About Section -->
+      <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+
+
+
+        <a href="https://vibe.naver.com/search?query=drhong" target="_blank"><img class="XNo5Ab" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHyYkKDQsJCYtJx8fKD0tMS03OkM6Iys1RD8sQzQ5LjUBCgoKDQwNGg8PGjclHyU3Nzc3MDc3Nzc3NzctNzcrNTcuNjc3NzU3NzU3NzcvNTg3NzcxKzU1Ny01NSs3LTctN//AABEIABwAHAMBEQACEQEDEQH/xAAaAAACAgMAAAAAAAAAAAAAAAAEBgMFAAIH/8QAJhAAAQMDAwMFAQAAAAAAAAAAAQIDBQAEERIhMQYTURQyQWGhFf/EABoBAAMBAAMAAAAAAAAAAAAAAAIEBQMBBgf/xAAlEQABBAEEAQQDAAAAAAAAAAABAAIDEQQTITFBEgUUgYIyQnH/2gAMAwEAAhEDEQA/AKMkDk4rhetUi5OMvYtbaJBgsqdR3EAqScp87E0QS0ORDkgmJ10a75+VHIxt5Got13zBZTco7jJKknWnbfY7cjmnYG+XCSGVFK5wjN+OxQeabEZQeaaulHbBuI6jTfOWqXV2RFuHikKUrSv2Z+eOPqpr8V44FrP1F8rp8cx3QdvV8WOU4TsPZTEgBepWfTxAcb0r04OTWIY7pQ8TPkxITpnl+/8AKCwPxzV1BLlnLRtkwitJulJCdWWcY1bZxn9pyOCQxuDASQRx8pORz3aunf59fZcgQToTnnFdk9urRn3RKhkEea19qAmTOU6dPdWB64kHZ26abP8AP9OxhBGrc7bfO9Tsj0wtDBC297Kg5UAa1oiHdlJ8rNXsqzZN3qkEWbXaa0oxhOBz54FW4MGOEuLP2NoSWxk+PartdNaQQayNPFAq5UK6IJSUoddbBT5CtKJYr//Z" style="height:30px;width:30px" alt="" data-csiid="8" data-atf="1"></a>
+       
+
+
+        <a href="https://www.instagram.com/drhongjazz/" target="_blank">    <img alt="Instagram Social Icon" fetchpriority="high" src="https://static.wixstatic.com/media/8d6893330740455c96d218258a458aa4.png/v1/fill/w_30,h_30,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/8d6893330740455c96d218258a458aa4.png" style="width: 30px; height: 30px; object-fit: cover;margin: 5px;"></a>
+       
+       
+        <a href="https://www.youtube.com/@DrHongOfficial" target="_blank"><img alt="YouTube Social  Icon" fetchpriority="high" src="https://static.wixstatic.com/media/a1b09fe8b7f04378a9fe076748ad4a6a.png/v1/fill/w_30,h_30,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/a1b09fe8b7f04378a9fe076748ad4a6a.png" style="width: 30px; height: 30px; object-fit: cover;margin:5px;"></a>
+       
+        <a href="https://open.spotify.com/artist/6B3QMrTwG04kqwFgvbKI52" target="_blank"><img alt="Spotify Social Icon" fetchpriority="high" src="https://static.wixstatic.com/media/b027270699e640698abf456a70f5cac2.png/v1/fill/w_30,h_30,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/b027270699e640698abf456a70f5cac2.png" style="width: 30px; height: 30px; object-fit: cover;"></a>
+       
+        <a href="https://music.apple.com/us/artist/drhong/1747683497" target="_blank"><img alt="iTunes Social Icon" fetchpriority="high" src="https://static.wixstatic.com/media/f4539b2533f44ffda747dbdd22fea6aa.png/v1/fill/w_30,h_30,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f4539b2533f44ffda747dbdd22fea6aa.png" style="width: 30px; height: 30px; object-fit: cover;"></a>
+        <br>
+
+        <h2 class="w3-text-light-grey">DrHong</h2>
+        <p class=" w3-text-blue" style="font-style: italic; ">10 Solo Albums, 1 Saxophone book, Jazz / Blues </p>
+        <hr style="width:200px" class="w3-opacity">
+        <p style="font-size:15px">
+
+
+          Saxophonist Dr. Hong studied jazz saxophone at Delta Community Music School in Canada<br/> and got a Doctor of Musical Art In Computer Music (D.M.A) at Dongguk University,<br/>
+          Master of Computer Engineering (M.C.E) at Yonsei University,<br/>
+          Master of Music In Computer Music (M.M) at Dongguk University,<br/>
+          He was also invited as a Visiting Scholar to Plymouth University in UK and<br/>
+          had a speech about "Music Technology" at Carnegie Mellon University.
+          <br/>
+          Various experiences through jam sessions with jazz clubs in Canada and <br/>
+          visiting scholars in the UK and became the motive for creating songs.<br/>
+          He has already released various albums and is trying to express his own unique color with<br/>
+          Jazz, funky, pop, contemporary music based on blues
+        </p>
+        <p style="font-size:15px">
+
+  색소포니스트 닥터홍은 캐나다 Delta Community Music School 에서 재즈 색소폰을 공부하였고 <br/>
+  동국대학교 대학원 Doctor of Musical Art In Computer Music (D.M.A) 박사학위를 받았으며<br/>
+  연세대학교 대학원 Computer Engineering (M.C.E) 석사<br/>
+  동국대학교 대학원 Master of Music In Computer Music (M.M) 석사<br/>
+  학위를 취득하였다. <br />
+  영국 Plymouth University에 Visiting Scholar로 초청되기도하였으며<br/>
+  미국 Carnegie Mellon University에서 음악기술주제로 강연도 하였다. <br/>
+  <br/>
+  영국 Visiting Scholar, 캐나다 재즈클럽에서 잼세션을 통한 다양한경험들은 곡을 창작하는데 모티브가 되었다<br/>
+  블루스를 기반으로 재즈 펑키 팝 발라드 현대음악<br/>
+  인터랙티브 공연 등 장르에 국한되지 않고 다양한 장를 공연한다.<br/>
+  이미 수장의 다양한 앨범을 발표하였으며 다양한 본인만의 색깔을 표현하려한다.
+  <br/>
+
+</p>
+<pre>
+2002 Korea/Japan World Cup
+2004 Delta community music school, Canada
+2004 Yale Bluse Club Jam Session in Canada
+2006 Korea pops orchestra 
+2009 Seeing Sound,Listening image
+2009 9th International Jarasum Jazz Festival
+2009 Resonation : Telematic interactive networking concert 
+      at San Diego and New York in USA, 
+      Banff and Alberta in CANADA, 
+      Belfast and Northern Ireland in UK.
+2010 10th International Jarasum Jazz Festival
+2014 Korean traditional music broadcast “Dreaming Arirang”
+2015 Seeing Sound,Listening image 12
+2016 Seeing Sound,Listening image 13
+2023 Bistro / Rex Jazz Club Jam Session in Toronto
+2024 10th Album "in Plymouth" / Jazz Concert 
+... more
+  </pre>
+  <br/>
+<!-- <pre>
+2002 한일 월드컵, Korea/Japan World Cup
+2002 아시안게임, 아태장애인게임, 
+2004 Delta community music school, Canada
+2004 Yale Bluse Club Jam Session in Canada
+2006 Korea pops orchestra 수석단원
+2009 인터랙티브 공연 Seeing Sound,Listening image
+2009 "청성자진한잎" 세션 인터랙티브 멀티미디어공연 연주회 문화일보홀
+2009 서울 하이 페스티발
+2009 인터랙티브 공연 보는소리 듣는영상 /  Seeing Sound,Listening image
+2009 자라섬 국제 재즈 페스티발
+2009 Resonation : telematic interactive networking concert 
+     at San Diego and New York in USA, Banff and Alberta in CANADA, Belfast and Northern Ireland in UK.
+2010 자라섬 국제 재즈 페스티발 
+2010 T-OK 앨범 SAXOPHONE 세션
+2010 "Spirit"인터랙티브 공연 보는소리 듣는영상 /  Seeing Sound,Listening image
+2011 "endure" 인터랙티브 공연 보는소리 듣는영상 /  Seeing Sound,Listening image
+2012, 2013 블루스 가수 Gail storm 세션
+2012 "I" 세션 인터랙티브 공연 보는소리 듣는영상 
+2013 Interactive performance "out of sight" 부평 아트센터
+2013 "Sonic illutsion" 세션 홍익대 아트 센터 
+2013 "Arirang" 인터랙티브 공연 보는소리 듣는영상 10 /  Seeing Sound,Listening image
+2014 "혼잣말" 세션 인터랙티브 공연 보는소리 듣는영상11 /  Seeing Sound,Listening image
+2014 Blues 기타리스트 양동훈 앨범세션
+2014 국악방송 초대손님 “꿈꾸는아리랑” 출연
+2015 "아리랑 두번째 이야기" 인터랙티브 공연 보는소리 듣는영상 12 /  Seeing Sound,Listening image
+2015 "White night" 인터랙티브 공연 보는소리 듣는영상 13 /  Seeing Sound,Listening image
+2015 하울링 공연
+2023 Canada, Toronto "Bistro, 렉스 호텔 재즈 잼세션
+2024 음반작업, 재즈클럽 
+... more
+</pre> -->
+        </p>
+    
+
+
+        
+      <!-- End About Section -->
+      </div>
+      <!-- music Section -->
+      <div class= "w3-content" id="music">
+        <h2 class="w3-text-light-grey">My Music</h2>
+        <hr style="width:200px" class="w3-opacity">
+
+        <div class="video-wrap">
+          <iframe id="video" width="100%" height="315" src="https://www.youtube.com/embed/PQtN4sqfcig" frameborder="0" allowfullscreen></iframe>
+        </div>
+        
+        <div class="video-wrap">
+          <iframe id="video" width="100%" height="315" src="https://www.youtube.com/embed/wH3TA57SrB4" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="video-wrap">
+          <iframe id="video" width="100%" height="315" src="https://www.youtube.com/embed/IPFG-3OdF3M" frameborder="0" allowfullscreen></iframe>
+        </div>
+     
+   
+        <!-- <blockquote class="instagram-media insta" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/C5cRHQnyElR/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/C5cRHQnyElR/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/C5cRHQnyElR/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by DrHong | Jazz Saxophonist | 컴퓨터음악박사(Doctor of Musical Art) (@drhongjazz)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+ -->
+
+
+
+        <h2 class="w3-text-light-grey">My ALBUM</h2>
+        <hr style="width:200px" class="w3-opacity">
+        <!-- !PAGE CONTENT! -->
+        <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:10px;">
+              <!-- 0 Photo Grid-->
+              <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+                <div class="w3-quarter">
+                  <img src="./../img/ply.jpg" alt="In Plymouth" style="width:90%">
+                  <h3>2024 album </br> "In Plymouth"</h3>
+                  <p>Title : In Plymouth</br>
+                      released : 2024. 06. 07 </br>
+                      concept :   Jazz </br>
+                      Instruments : Saxophone </br>
+                      All song by DrHong</p>
+                </div>
+                <div class="w3-quarter">
+                  <img src="./../img/ari.jpg" alt="Arirang Second Story with Dr.Saxophone" style="width:90%">
+                  <h3>2024 album </br> "Arirang Second Story with Dr.Saxophone"</h3>
+                  <p>Title : Arirang Second Story with Dr.Saxophone</br>
+                    released : 2024. 05. 26 </br>
+                    concept : Interactive music </br>
+                    Instruments : Saxophone, Samul-lori </br>
+                    All song by DrHong
+                </p>
+                </div>
+          
+             
+              </div>
+          <!-- First Photo Grid-->
+          <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+            <div class="w3-quarter">
+              <img src="./../img/gg.jpg" alt="Forest of owl" style="width:90%">
+              <h3>2015 album </br> "Forest of owl"</h3>
+              <p>Title : Forest of owl</br>
+                  released : 2015. 09. 30 </br>
+                  concept : Interactive music </br>
+                  Instruments : Alto saxo, Guitar </br>
+                  All song by Euy shick, Hong</p>
+            </div>
+            <div class="w3-quarter">
+              <img src="./../img/ff.jpg" alt="Arirang second story" style="width:90%">
+              <h3>2015 album </br> "Arirang second story"</h3>
+              <p>Title : Arirang second story </br>
+                released : 2015. 08. 27 </br>
+                concept : Interactive music </br>
+                Instruments : Tea-pyoung-so, Guitar </br>
+                All song by Euy shick, Hong
+            </p>
+            </div>
+            <div class="w3-quarter">
+              <img src="./../img/ee.jpg" alt= "Arirang"style="border:1px solid;width:90%">
+              <h3> 2014 album </br> "Arirang"</h3>
+              <p>
+                Title : Arirang </br>
+                released : 2014. 03. 28 </br>
+                concept : Interactive music </br>
+                Instruments : Tea-pyoung-so </br>
+                Arranged by Euy shick, Hong </br>
+            </p>
+            </div>
+            <div class="w3-quarter">
+              <img src="./../img/dd.jpg" alt="Interaktive" style="width:90%">
+              <h3>2011 interactive album </br> "Interaktive"</h3>
+              <p>
+                Title : Interaktive </br>
+                released : 2011. 11. 07 </br>
+                concept : Interactive music </br>
+                Instruments : Alto saxophone </br>
+                All song by Euy shick, Hong </br>
+            </p>
+            </div>
+          </div>
+
+          <!-- Second Photo Grid-->
+          <div class="w3-row-padding w3-padding-16 w3-center">
+            <div class="w3-quarter">
+              <img src="./../img/bg.jpg" alt="blue garlic" style="width:90%">
+              <h3>2011 blues album </br> "blue garlic"</h3>
+              <p>Title : blue garlic </br>
+                released : 2011. 08. 01 </br>
+                concept : blues </br>
+                Instruments : Alto saxophone, Guitar </br>
+                All song by Euy shick, Hong
+              </p>
+            </div>
+            <div class="w3-quarter">
+              <img src="./../img/cc.jpg" alt="butter fry" style="width:90%">
+              <h3>2011 interactive album </br> "butter fry"</h3>
+              <p>
+                Title : butter fry </br>
+                released : 2011. 02. 10 </br>
+                concept : Interactive music </br>
+                Instruments : Alto saxophone </br>
+                All song by Euy shick, Hong
+              </p>
+            </div>
+            <div class="w3-quarter">
+              <img src="./../img/bb.jpg" alt="Sandwich" style="width:90%">
+              <h3>2010 1st album </br> "Do you like apple?"</h3>
+              <p>
+                  Title : Do you like apple?  </br>
+                  released : 2010. 06. 18 </br>
+                  concept : Jazz, sound effects </br>
+                  Instruments : Alto saxophone </br>
+                  All song by Euy shick, Hong</br>
+            </p>
+            
+            </div>
+            <div class="w3-quarter">
+              <img src="./../img/aa.jpg" alt="Croissant" style="width:90%">
+              <h3>2009 Solo album "Dr.Hong"</h3>
+              <p>Title : Dr.Hong </br>
+                released : 2009. 09. 17</br>
+                concept : Jazz, blues, Funky</br>
+                Instruments : Alto saxophone </br>
+                All song by Euy shick, Hong</p>
+            </div>
+          </div>
+
+
+        <!-- End page content -->
+        </div>
+
+      </div>
+      <!-- Portfolio Section -->
+      <div class="w3-padding-64 w3-content" id="photos">
+        <h2 class="w3-text-light-grey">My Photos</h2>
+        <hr style="width:200px" class="w3-opacity">
+    
+        <!-- Grid for photos -->
+        <div class="w3-row-padding" style="margin:0 -16px">
+          <div class="w3-half">
+            <img src="../img/d.jpg" style="width:30%">
+            <img src="../img/ddh.jpg" style="width:30%">
+            <img src="../img/bgarlic.jpg" style="width:30%">
+          </div>
+    
+          <div class="w3-half">
+            <img src="../img/dw2.jpg" style="width:30%">
+            <img src="../img/ddd.jpg" style="width:30%">
+            <img src="../img/dddk.jpg" style="width:30%">
+          </div>
+
+          <div class="w3-half">
+            <img src="../img/gb.jpg" style="width:30%">
+            <img src="../img/gfd.jpg" style="width:30%">
+            <img src="../img/ggj.jpg" style="width:30%">
+          </div>
+
+          <div class="w3-half">
+            <img src="../img/ddh.jpg" style="width:30%">
+            <img src="../img/cc.jpg" style="width:30%">
+            <img src="../img/eb.jpg" style="width:30%">
+          </div>
+
+          <div class="w3-half">
+            <img src="../img/eee.jpg" style="width:30%">
+            <img src="../img/eeh.jpg" style="width:30%">
+            <img src="../img/ert.jpg" style="width:30%">
+          </div>
+
+          <div class="w3-half">
+            <img src="../img/ev.jpg" style="width:30%">
+            <img src="../img/fv.jpg" style="width:30%">
+            <img src="../img/ffj.jpg" style="width:30%">
+          </div>
+
+          <div class="w3-half">
+            <img src="../img/gfd.jpg" style="width:30%">
+            <img src="../img/ggf.jpg" style="width:30%">
+            <img src="../img/ggj.jpg" style="width:30%">
+          </div>
+
+          <div class="w3-half">
+            <img src="../img/qqq.jpg" style="width:30%">
+            <img src="../img/qq.jpg" style="width:30%">
+            <img src="../img/qn.jpg" style="width:30%">
+          </div>
+
+          <div class="w3-half">
+            <img src="../img/r.jpg" style="width:30%">
+            <img src="../img/rb.jpg" style="width:30%">
+            <img src="../img/rcee.jpg" style="width:30%">
+          </div>
+
+          <div class="w3-half">
+            <img src="../img/rre.jpg" style="width:30%">
+            <img src="../img/rrr.jpg" style="width:30%">
+            <img src="../img/s.jpg" style="width:30%">
+          </div>
+
+          <div class="w3-half">
+            <img src="../img/t.jpg" style="width:30%">
+            <img src="../img/tb.jpg" style="width:30%">
+            <img src="../img/rcee.jpg" style="width:30%">
+          </div>
+
+          <div class="w3-half">
+            <img src="../img/tjt.jpg" style="width:30%">
+            <img src="../img/tm.jpg" style="width:30%">
+            <img src="../img/tth.jpg" style="width:30%">
+          </div>
+
+          <div class="w3-half">
+            <img src="../img/ttt.jpg" style="width:30%">
+            <img src="../img/tyu.jpg" style="width:30%">
+            <img src="../img/u.jpg" style="width:30%">
+          </div>
+
+          
+          <div class="w3-half">
+            <img src="../img/uiu.jpg" style="width:30%">
+            <img src="../img/uku.jpg" style="width:30%">
+            <img src="../img/uu.jpg" style="width:30%">
+          </div>
+
+          
+          <div class="w3-half">
+            <img src="../img/uuk.jpg" style="width:30%">
+            <img src="../img/v.jpg" style="width:30%">
+            <img src="../img/w.jpg" style="width:30%">
+          </div>
+
+          <div class="w3-half">
+            <img src="../img/wc.jpg" style="width:30%">
+            <img src="../img/whw.jpg" style="width:30%">
+            <img src="../img/ws.jpg" style="width:30%">
+          </div>
+
+          <div class="w3-half">
+            <img src="../img/ww.jpg" style="width:30%">
+            <img src="../img/wwf.jpg" style="width:30%">
+            <img src="../img/wy.jpg" style="width:30%">
+          </div>
+
+          <div class="w3-half">
+            <img src="../img/x.jpg" style="width:30%">
+            <img src="../img/xxx.jpg" style="width:30%">
+            <img src="../img/yky.jpg" style="width:30%">
+          </div>
+
+          <div class="w3-half">
+            <img src="../img/yy.jpg" style="width:30%">
+            <img src="../img/yye.jpg" style="width:30%">
+            <img src="../img/yyj.jpg" style="width:30%">
+          </div>
+        <!-- End photo grid -->
+        </div>
+      <!-- End Portfolio Section -->
+      </div>
+
+
+      <!-- Schedule Section -->
+      <div class="w3-padding-64 w3-content w3-text-grey" id="schedule">
+        <h2 class="w3-text-light-grey">Schedule</h2>
+        <hr style="width:200px" class="w3-opacity">
+        <p class ="googleId" align="middle">
+          <iframe src="https://calendar.google.com/calendar/embed?height=500&wkst=1&ctz=Asia%2FSeoul&bgcolor=%23616161&showTabs=0&showPrint=0&showTitle=0&hl=en_GB&src=ZHJob25nLmpzQGdtYWlsLmNvbQ&color=%23039BE5" style="border-width:0" width="600" height="500" frameborder="0" scrolling="no"></iframe>
+        </p>
+      </div>
+
+
+      <!-- Contact Section -->
+      <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+        <h2 class="w3-text-light-grey">Contact Me</h2>
+        <hr style="width:200px" class="w3-opacity">
+    
+        <div class="w3-section">
+          <!-- <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Seoul, Korea</p>
+          <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: email</p> -->
+          <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: drhong.js@gmail.com</p>
+
+
+          <a href="https://vibe.naver.com/search?query=drhong" target="_blank"><img class="XNo5Ab" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHyYkKDQsJCYtJx8fKD0tMS03OkM6Iys1RD8sQzQ5LjUBCgoKDQwNGg8PGjclHyU3Nzc3MDc3Nzc3NzctNzcrNTcuNjc3NzU3NzU3NzcvNTg3NzcxKzU1Ny01NSs3LTctN//AABEIABwAHAMBEQACEQEDEQH/xAAaAAACAgMAAAAAAAAAAAAAAAAEBgMFAAIH/8QAJhAAAQMDAwMFAQAAAAAAAAAAAQIDBQAEERIhMQYTURQyQWGhFf/EABoBAAMBAAMAAAAAAAAAAAAAAAIEBQMBBgf/xAAlEQABBAEEAQQDAAAAAAAAAAABAAIDEQQTITFBEgUUgYIyQnH/2gAMAwEAAhEDEQA/AKMkDk4rhetUi5OMvYtbaJBgsqdR3EAqScp87E0QS0ORDkgmJ10a75+VHIxt5Got13zBZTco7jJKknWnbfY7cjmnYG+XCSGVFK5wjN+OxQeabEZQeaaulHbBuI6jTfOWqXV2RFuHikKUrSv2Z+eOPqpr8V44FrP1F8rp8cx3QdvV8WOU4TsPZTEgBepWfTxAcb0r04OTWIY7pQ8TPkxITpnl+/8AKCwPxzV1BLlnLRtkwitJulJCdWWcY1bZxn9pyOCQxuDASQRx8pORz3aunf59fZcgQToTnnFdk9urRn3RKhkEea19qAmTOU6dPdWB64kHZ26abP8AP9OxhBGrc7bfO9Tsj0wtDBC297Kg5UAa1oiHdlJ8rNXsqzZN3qkEWbXaa0oxhOBz54FW4MGOEuLP2NoSWxk+PartdNaQQayNPFAq5UK6IJSUoddbBT5CtKJYr//Z" style="height:30px;width:30px;margin: 5px;" alt="" data-csiid="8" data-atf="1">https://vibe.naver.com/search?query=drhong</a>
+
+          <br>
+
+          <a href="https://www.instagram.com/drhongjazz/" target="_blank">    <img alt="Instagram Social Icon" fetchpriority="high" src="https://static.wixstatic.com/media/8d6893330740455c96d218258a458aa4.png/v1/fill/w_30,h_30,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/8d6893330740455c96d218258a458aa4.png" style="width: 30px; height: 30px; object-fit: cover;margin: 5px;">https://www.instagram.com/drhongjazz/ </a>
+       
+          <br>
+          <a href="https://www.youtube.com/@DrHongOfficial" target="_blank"><img alt="YouTube Social  Icon" fetchpriority="high" src="https://static.wixstatic.com/media/a1b09fe8b7f04378a9fe076748ad4a6a.png/v1/fill/w_30,h_30,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/a1b09fe8b7f04378a9fe076748ad4a6a.png" style="width: 30px; height: 30px; object-fit: cover;margin:5px;"></i>https://www.youtube.com/@DrHongOfficial </a>
+          <br>
+          <a href="https://open.spotify.com/artist/6B3QMrTwG04kqwFgvbKI52" target="_blank"><img alt="Spotify Social Icon" fetchpriority="high" src="https://static.wixstatic.com/media/b027270699e640698abf456a70f5cac2.png/v1/fill/w_30,h_30,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/b027270699e640698abf456a70f5cac2.png" style="width: 30px; height: 30px; object-fit: cover;margin: 5px;"></i>https://open.spotify.com/artist/6B3QMrTwG04kqwFgvbKI52 </a>
+          <br>
+
+          <a href="https://music.apple.com/us/artist/drhong/1747683497" target="_blank"><img alt="iTunes Social Icon" fetchpriority="high" src="https://static.wixstatic.com/media/f4539b2533f44ffda747dbdd22fea6aa.png/v1/fill/w_30,h_30,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f4539b2533f44ffda747dbdd22fea6aa.png" style="width: 30px; height: 30px; object-fit: cover;margin: 5px;">https://music.apple.com/us/artist/drhong/1747683497 </a>
+          <br>
+
+
+        <p>Let's get in touch. Send me a message:</p>
+        <a href=" https://drhon9-note.blogspot.com/" target="_blank"> ©2024 Drhong</a>
+       
+     
+      <!-- End Contact Section -->
+      </div>
+    
+    <!-- END PAGE CONTENT -->
+    </div>
+    
+    </body>
+</html>

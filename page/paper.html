@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>document.write('<link rel="stylesheet" href="../style/dr.css?check=' + Date.now() + '">');</script>
+    <script>document.write('<script src="../js/Dr.paper.js?check=' + Date.now() + '"><\/script>');</script>
+    <script>document.write('<script src="../js/Dr.Api.js?check=' + Date.now() + '"><\/script>');</script>
+</head>
 <style>
 body {font-family: "Times New Roman", Georgia, Serif;}
 h1,h2,h3,h4,h5,h6 {
@@ -11,31 +17,34 @@ h1,h2,h3,h4,h5,h6 {
     letter-spacing: 5px;
 }
 </style>
+
 <body>
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-    <div class="w3-dropdown-hover">
-      <button class="w3-button w3-black">Select About Papers</button>
-      <div class="w3-dropdown-content w3-bar-block w3-border">
+    <div>
+      <button class="w3-button w3-black" id="select_paper">Select About Papers</button>
+      <div class="w3-bar-block w3-border" id="paper_menu">
+        <a href="#DoctoralDissertation" class="w3-bar-item w3-button"><b>Doctoral Dissertation</b>"A study of Interactive Web Application through Web-based Audio Library Development" 2019</a>
+        <a href="#masterThesis" class="w3-bar-item w3-button"><b>Master Thesis</b> "Audio-visual performance by real-time timbre analyze of saxophone" 2011</a>
+
+        <a href="#drwebusic" class="w3-bar-item w3-button">"DrWebusic : Real-time Interactive Audio System on the Web" 2019</a>
         <a href="#drsax2" class="w3-bar-item w3-button">"A Study of Hybrid Saxophone Interface for Interactive Networking System" 2018</a>
         <a href="#ds2" class="w3-bar-item w3-button">"Interactive Web Audio Networking System and Method with DrSax.js" 2017</a>
         <a href="#monet" class="w3-bar-item w3-button">"Play the light of Monet : Interactive web audio/visual networking system" 2017</a>
         <a href="#drsax" class="w3-bar-item w3-button">"Drsax.js: a javascript based unified web audio library and framework" 2017</a>
         <a href="#tele" class="w3-bar-item w3-button">"Telesaxophone: hybrid Saxophone interface" 2017</a>
         <a href="#webxo" class="w3-bar-item w3-button">"Webxophone:  web audio wind instrument" 2017</a>
-        <a href="#drsax1" class="w3-bar-item w3-button">"Dr.Saxophone : Hybrid saxophone interface" 2017</a>
+        <a href="#drsax1" class="w3-bar-item w3-button">"Dr.Saxophone : Hybrid saxophone interface" 2016</a>
         <a href="#arr" class="w3-bar-item w3-button">"A study on sound analysis and saxophone technique in Claudio Gabriele’s [ARRIFLEX 35]" 2016</a>
         <a href="#reed" class="w3-bar-item w3-button">"A study on timbre analysis of saxophone sound by different reeds" 2015</a>
         <a href="#timbre" class="w3-bar-item w3-button">"A study on timbre analysis of saxophone sound by different mouthpieces" 2014</a>
       </div>
-
-
-    </div>
-    <!-- Right-sided navbar links. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a href="../index.html" class="w3-bar-item w3-button">Dr.Hong</a>
+      <!-- Right-sided navbar links. Hide them on small screens -->
+      <div class="w3-right w3-hide-small">
+        <a href="../index.html" class="w3-bar-item w3-button">Dr.Hong</a>
+      </div>
     </div>
   </div>
 </div>
@@ -43,6 +52,99 @@ h1,h2,h3,h4,h5,h6 {
 
 <!-- Page content -->
 <div class="w3-content" style="max-width:1100px" id="top">
+    
+  
+    <!-- "Doctoral Dissertation" -->
+    <div class="w3-row w3-padding-64" id="DoctoralDissertation">
+        <div class="w3-col m6 w3-padding-large w3-hide-small">
+         <img src="./../img/doc.jpg" class="w3-round w3-image " alt="Table Setting" width="400" style="border: 1px solid;margin-left:40px">
+        </div>
+        <div class="w3-col m6 w3-padding-large">
+          <h5 class="w3-center">"A study of Interactive Web Application through Web-based Audio Library Development"</h5><br>
+          <button><a href="./../pdf/2019_drsax.pdf" target="_blank"> <b>PDF Download</b></a></button>
+          <p class="w3-large w3-text-grey w3-hide-medium"><b>D.M.A(Doctor of Musical Arts) in Computer Music<br /> Doctoral Dissertation</b></p>
+          <h5 class="w3-center">Abstract</h5>
+          <p class="w3-large">
+              Style of music has constantly been developed by musicians and
+              information technologies. Especially, computer music has studied for
+              synthesizing and audio processing on the web technologies with
+              javascript that is a flexible language with a front and server-side
+              capabilities, commonly, working dynamic interactions and networking.
+              This paper aims an interactive web application development with a
+              web audio library DrSax.js through the Web Audio API and can be
+              separated into four parts.
+              First, DrSax.js has developed as a web audio library, making it
+              possible to speedy and easily make web applications to control
+              interactive audio processing, sound effects, visualization, and media
+              art. Normally, web audio applications need data to control UI and
+              visualization, such as on/off buttons, dials, slides. So DrSax.js offers
+              a number of functionalities that visualization and data control
+              function.
+              Second, this paper supports web code editor and debugging an
+              application that is DrEditor supports variously preset for test and
+              development.
+              Third, DrWebSax is a multi-sound workstation for saxophone. It
+              works that sound effects, processing, recorder, tuner for live
+              interactive performance in real time.
+              Last, Composition 2017 is a media art installation that is interactive
+              web audio system using DrSax.js and Node.js with PC and mobile. A
+              user can communicate and control images and sounds processing
+              through other user’s application in real-time at various place. Also,
+              users can access the web application with Wi-Fi or 3G, 4G data.
+              This paper describes a web audio library and interactive web-audio
+              system to control that audio processing, sound effects, visualization.
+              This paper aims a faster and more effective interactive web
+              application development through the audio library DrSax.js, which
+              was developed using web technology for interactive multimedia
+              contents.
+          </p>
+        </div>
+  </div>
+  <hr>
+
+  <!-- "Master Thesis" -->
+  <div class="w3-row w3-padding-64" id="masterThesis">
+      <div class="w3-col m6 w3-padding-large w3-hide-small">
+       <img src="./../img/master.jpg" class="w3-round w3-image " alt="Table Setting" width="400" style="border: 1px solid;margin-left:40px">
+      </div>
+      <div class="w3-col m6 w3-padding-large">
+        <h5 class="w3-center">"Audio-visual performance by real-time timbre analyze of saxophone"</h5><br>
+        <button><a href="./../pdf/thesis_547952554_3.pdf" target="_blank"> <b>PDF Download</b></a></button>
+        <p class="w3-large w3-text-grey w3-hide-medium"><b>M.M(Master of Music) in Computer Music<br /> Master Thesis</b</p>
+        <h5 class="w3-center">Abstract</h5>
+        <p class="w3-large">
+            "SPIRIT" is a interactive multimedia music composition using a saxophone, sound effects and real-time processed visual image. This piece is controlled by saxophone that would be a composer, conductor and player at the same time. The goal of this study is to find the way of artistic expression by using sound and image.
+                This system alters concept of music from listening music to watching music, and you provide a new hearing method to listeners. The sound of saxophone is computer analyzed and converted to data, and it used to change parameters of image of the works.
+                Using a Max/MSP programs to analyze the sound of saxophone, and these programs used the sound as a data to apply to the image. A data which is an analysis of saxophone pitches converted to position of the image, an amplitude data of the saxophone converted to size of image, and FFT analysis data of saxophone is an analysis of amplitude per frequency converted to colors of the image. Quartz Composer used for image production that controlled by saxophone sound. In addition, delays and pitch of the saxophone sound effects were fabricated by changing the value. Saxophone sound is harmony with sound effects which controlled by foot controller.
+                Researching this system, to analyze the sound of saxophone in real time is define a mutual relation between sound and image. Through such technology, the saxophone was able to control the music and image. In addition, the audience were able to easily sympathize with the meaning of work by multimedia element.
+        </p>
+      </div>
+  </div>
+  <hr>
+
+  
+  <!-- "DrWebusic : Real-time Interactive Audio System on the Web" -->
+  <div class="w3-row w3-padding-64" id="drwebusic">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="./../img/dw.jpg" class="w3-round w3-image " alt="Table Setting" width="400" style="border: 1px solid;margin-left:40px">
+    </div>
+    <div class="w3-col m6 w3-padding-large">
+      <h5 class="w3-center">"DrWebusic : Real-time Interactive Audio System on the Web"</h5><br>
+      <button><a href="./../pdf/drwebusic.pdf" target="_blank"> <b>PDF Download</b></a></button>
+      <p class="w3-large w3-text-grey w3-hide-medium">Euy shick Hong, Journal of Digital Contents Society 2019 (KCI)</p>
+      <h5 class="w3-center">Abstract</h5>
+      <p class="w3-large">
+        The development of science and technology has enabled real-time interactive performances using multimedia contents, video and
+music. These multimedia performances provide various kinds of spectacle to the audience with the genre fusion arts, and the
+audience participate in the works and lead the performances by realtime interaction.
+ It also uses computers and mobile-based, standalone applications to control media, video, and music in real time. However,
+installable applications are not efficient in accessibility and compatibility, which limits the use of performance systems. In this
+paper, we developed an interactive multimedia system using web technology with high accessibility. The audio system was implemented using HTML5 API and audio library DrSax.js, and the server was built with Node.js, an asynchronous method for
+real-time interaction. We also used mobile sensors to control data through real-time interaction. We analyze the performance of
+web audio application implemented through these features and investigate the efficiency of this study.</p>
+    </div>
+  </div>
+  <hr>
 
   <!-- "A Study of Hybrid Saxophone Interface for Interactive Networking System" -->
   <div class="w3-row w3-padding-64" id="drsax2">
@@ -51,6 +153,7 @@ h1,h2,h3,h4,h5,h6 {
     </div>
     <div class="w3-col m6 w3-padding-large">
       <h5 class="w3-center">"A Study of Hybrid Saxophone Interface for Interactive Networking System"</h5><br>
+      <button><a href="./../pdf/19_drsax2.pdf" target="_blank"> <b>PDF Download</b></a></button>
       <p class="w3-large w3-text-grey w3-hide-medium">Euy shick Hong, Jun Kim, Asia-pacific Journal of Multimedia services convergent with Art,and Humanities Sociology 2018 (KCI)</p>
       <h5 class="w3-center">Abstract</h5>
       <p class="w3-large">
@@ -76,6 +179,7 @@ h1,h2,h3,h4,h5,h6 {
     </div>
     <div class="w3-col m6 w3-padding-large">
       <h5 class="w3-center">"Interactive Web Audio Networking System and Method with DrSax.js"</h5><br>
+      <button><a href="./../pdf/17_ICCIP_DrSaxjs.pdf" target="_blank"> <b>PDF Download</b></a></button>
       <p class="w3-large w3-text-grey w3-hide-medium">Euy shick Hong, Jun Kim, the 3rd International Conference on Communication and Information 2017 Tokyo uni. (SCOPUS)</p>
       <h5 class="w3-center">Abstract</h5>
       <p class="w3-large">
@@ -101,6 +205,7 @@ h1,h2,h3,h4,h5,h6 {
     </div>
     <div class="w3-col m6 w3-padding-large">
       <h5 class="w3-center">"Play the light of Monet : Interactive web audio/visual networking system"</h5><br>
+      <button><a href="./../pdf/17_EASKO_monet.pdf" target="_blank"> <b>PDF Download</b></a></button>
       <p class="w3-large w3-text-grey w3-hide-medium">Euy shick Hong, Jun Kim, In Proceedings of Engineering and Art Society of Korea Conference, Korea, 2017</p>
       <h5 class="w3-center">Abstract</h5>
       <p class="w3-large">
@@ -124,6 +229,7 @@ h1,h2,h3,h4,h5,h6 {
     </div>
     <div class="w3-col m6 w3-padding-large">
       <h5 class="w3-center">"Drsax.js: a javascript based unified web audio library and framework"</h5><br>
+      <button><a href="./../pdf/17_ICACS_drsax.pdf" target="_blank"> <b>PDF Download</b></a></button>
       <p class="w3-large w3-text-grey w3-hide-medium">Euy shick Hong, Jun Kim, International Conference on Algorithms, Computing and Systems 2017 (SCOPUS)</p>
       <h5 class="w3-center">Abstract</h5>
       <p class="w3-large">
@@ -149,6 +255,7 @@ h1,h2,h3,h4,h5,h6 {
     </div>
     <div class="w3-col m6 w3-padding-large">
       <h5 class="w3-center">"Telesaxophone: hybrid Saxophone interface"</h5><br>
+      <button><a href="./../pdf/17_ICACS_telesaxophone.pdf" target="_blank"> <b>PDF Download</b></a></button>
       <p class="w3-large w3-text-grey w3-hide-medium">Euy shick Hong, Jun Kim, International Conference on Algorithms, Computing and Systems 2017 (SCOPUS)</p>
       <h5 class="w3-center">Abstract</h5>
       <p class="w3-large">
@@ -176,6 +283,7 @@ h1,h2,h3,h4,h5,h6 {
     </div>
     <div class="w3-col m6 w3-padding-large">
       <h5 class="w3-center">"Webxophone:  web audio wind instrument"</h5><br>
+      <button><a href="./../pdf/17_ICACS_webxophone.pdf" target="_blank"> <b>PDF Download</b></a></button>
       <p class="w3-large w3-text-grey w3-hide-medium">Euy shick Hong, Jun Kim, International Conference on Algorithms, Computing and Systems 2017 (SCOPUS)</p>
       <h5 class="w3-center">Abstract</h5>
       <p class="w3-large">
@@ -205,6 +313,7 @@ h1,h2,h3,h4,h5,h6 {
     </div>
     <div class="w3-col m6 w3-padding-large">
       <h5 class="w3-center">"Dr.Saxophone : Hybrid saxophone interface"</h5><br>
+      <button><a href="./../pdf/2016honges2.pdf" target="_blank"> <b>PDF Download</b></a></button>
       <p class="w3-large w3-text-grey w3-hide-medium">Euy shick Hong, Baron Kim, Kiyeor Han, The 3rd International Conference on Systems and Informatics 2016(SCOPUS)</p>
       <h5 class="w3-center">Abstract</h5>
       <p class="w3-large">
@@ -229,6 +338,7 @@ h1,h2,h3,h4,h5,h6 {
     </div>
     <div class="w3-col m6 w3-padding-large">
       <h5 class="w3-center">"A study on sound analysis and saxophone technique in Claudio Gabriele’s [ARRIFLEX 35]"</h5><br>
+      <button><a href="./../pdf/2016honges1.pdf" target="_blank"> <b>PDF Download</b></a></button>
       <p class="w3-large w3-text-grey w3-hide-medium">Euy shick Hong, Jun Kim, In Proceedings of Engineering and Art Society of Korea Conference, Korea 2016,</p>
       <h5 class="w3-center">Abstract</h5>
       <p class="w3-large">
@@ -252,6 +362,7 @@ h1,h2,h3,h4,h5,h6 {
     </div>
     <div class="w3-col m6 w3-padding-large">
       <h5 class="w3-center">"A study on timbre analysis of saxophone sound by different reeds"</h5><br>
+      <button><a href="./../pdf/2015honges2.pdf" target="_blank"> <b>PDF Download</b></a></button>
       <p class="w3-large w3-text-grey w3-hide-medium">Euy shick Hong, Jun Kim, In Proceedings of Engineering and Art Society of Korea Conference, Korea, 2015</p>
       <h5 class="w3-center">Abstract</h5>
       <p class="w3-large">
@@ -274,6 +385,7 @@ h1,h2,h3,h4,h5,h6 {
     </div>
     <div class="w3-col m6 w3-padding-large">
       <h5 class="w3-center">"A study on timbre analysis of saxophone sound by different mouthpieces"</h5><br>
+      <button><a href="./../pdf/2015honges1.pdf" target="_blank"> <b>PDF Download</b></a></button>
       <p class="w3-large w3-text-grey w3-hide-medium">Euy shick Hong, Jun Kim, In Proceedings of Engineering and Art Society of Korea Conference, Korea, 2014</p>
     </div>
   </div>
