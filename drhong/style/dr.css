@@ -1,0 +1,45 @@
+body {
+    font-family: "Lato", sans-serif;
+    padding: 0 !important;
+}
+.c56{
+    padding: 0 !important;
+}
+.mySlides {display: none}
+o {
+    list-style:none
+}
+a {
+    
+    text-decoration-line: none;
+    color: blue;
+}
+li {
+    letter-spacing: 2px;
+}
+
+.d8-margin-bottom {
+    margin-bottom: 8px!important;
+}
+.px_11 {
+    font-size:11px;
+}
+.line_height_2{
+    line-height: 2; 
+}
+img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.img_center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 993px){
+    #rightNavi {
+        position: fixed;
+        left: 74.99999%;
+    }  
+}
