@@ -3,6 +3,7 @@
   <title>DrHong</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="manifest" href="/manifest.json" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
   <link
@@ -63,7 +64,7 @@
       <h3 class="w3-center">
         <b>DrHong</b>
       </h3>
-      <p class="w3-padding-16 w3-center px_11" style="color: black">
+      <p class="w3-padding-16 w3-center px_11">
         <b>
           Doctor in Multimedia <br />
           ICMT CTO <br />
@@ -248,6 +249,20 @@
         document.getElementById("modal01").style.display = "block";
         var captionText = document.getElementById("caption");
         captionText.innerHTML = element.alt;
+      }
+    </script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/service-worker.js")
+            .then((registration) => {
+              console.log("Service Worker registered!");
+            })
+            .catch((error) => {
+              console.log("Service Worker registration failed: ", error);
+            });
+        });
       }
     </script>
   </body>
