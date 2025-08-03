@@ -11,18 +11,18 @@ var Dr = {};
 
   DrWeb.prototype = {
     init: function () {
-      that.htmlLoad();
+      that.slide();
     },
-    htmlLoad: function () {
+    slide: function () {
       $(document).ready(function () {
-        that.mainImage();
-
-        $("div[data-includeHTML]").each(function () {
-          $(this).load($(this).attr("data-includeHTML"));
+        $(".slider-class").slick({
+          autoplay: true, // 자동 재생
+          autoplaySpeed: 2000, // 자동 재생 속도 (3초)
+          dots: false, // 페이지네이션 점 표시
+          arrows: false, // 좌우 화살표 숨기기
+          infinite: true, // 무한 루프
+          fade: true, // 페이드 효과 사용 (선택 사항)
         });
-        setTimeout(() => {
-          Dr.Api.mainSet();
-        }, 1000);
       });
     },
     mainImage: function () {
