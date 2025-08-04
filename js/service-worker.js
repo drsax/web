@@ -3,7 +3,7 @@ const urlsToCache = [
   "/web",
   "../index.html",
   "../style/dr.css",
-  "../js/Dr.initSet.js",
+  "../js/Dr.InitSet.js",
 ];
 
 self.addEventListener("install", (event) => {
