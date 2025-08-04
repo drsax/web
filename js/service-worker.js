@@ -1,9 +1,9 @@
 const CACHE_NAME = "drhong";
 const urlsToCache = [
   "/",
-  "./index.html",
-  "./style/dr.css",
-  "./js/Dr.initSet.js",
+  "../index.html",
+  "../style/dr.css",
+  "../js/Dr.initSet.js",
 ];
 
 self.addEventListener("install", (event) => {
