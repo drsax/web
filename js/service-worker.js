@@ -1,6 +1,6 @@
 const CACHE_NAME = "drhong";
 const urlsToCache = [
-  "/",
+  "/web",
   "../index.html",
   "../style/dr.css",
   "../js/Dr.initSet.js",
