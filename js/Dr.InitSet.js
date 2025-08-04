@@ -15,7 +15,7 @@ var Dr = {};
     },
     htmlLoad: function () {
       $(document).ready(function () {
-        that.mainImage();
+        //that.mainImage();
 
         $("div[data-includeHTML]").each(function () {
           $(this).load($(this).attr("data-includeHTML"));
