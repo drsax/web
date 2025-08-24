@@ -140,9 +140,15 @@
           alt="main"
           style="width: 100%; opacity: 0"
         />
-        <div class="w3-display-topleft" style="padding: 10px 48px">
+        <div
+          id="english_id"
+          class="w3-display-topleft visible"
+          style="padding: 10px 48px"
+        >
+          <button id="langToggle" class="lang-toggle" onclick="koreanClick()">
+            korean
+          </button>
           <h1 class="w3-hide-small"><b>Dr.Euy Shick Hong</b></h1>
-          <h1 class="w3-hide-large w3-hide-medium">Euy Shick Hong</h1>
           <div style="color: gray">
             <b style="font-size: 12px">
               <div style="font-size: 13px; color: orange; padding-bottom: 10px">
@@ -151,6 +157,10 @@
               <div>Doctor in Multimedia, Dongguk University</div>
               <div>Master in Computer Engineering, Yonsei University</div>
               <div>Visiting scholar invited, plymouth University, UK</div>
+              <div>
+                Software Systems Design Consulting & Mentoring, Yonsei
+                University
+              </div>
             </b>
             <br />
             <div>
@@ -169,7 +179,6 @@
             "A study of Interactive Web Application through Web-based Audio
             Library Development".
             <br />
-            <br />
             I have been working in an IT company as R&D lead in the IT sector
             and developing research <br />
             into web-based music Technologies and AI at the Institute for
@@ -177,6 +186,53 @@
             I also was invited as a visiting scholar at Plymouth University in
             the Uk and had a speech about "Music Technology" at Carnegie Mellon
             University. <br />He also mentors students at Yonsei University.
+          </h5>
+          <br />
+          <div class="pb-1" style="color: gray">©2025 Euy Shick Hong</div>
+          <div class="italic" style="color: gray">
+            antaresax@gmail.com<br />
+          </div>
+        </div>
+        <div
+          id="korean_id"
+          class="w3-display-topleft"
+          style="padding: 10px 48px"
+        >
+          <button class="lang-toggle" onclick="englishClick()">English</button>
+
+          <h1 class="w3-hide-small"><b>홍의식 박사</b></h1>
+          <div style="color: gray">
+            <b style="font-size: 12px">
+              <div style="font-size: 13px; color: orange; padding-bottom: 10px">
+                소프트웨어 엔지니어
+              </div>
+              <div>동국대학교 멀티미디어학 박사</div>
+              <div>연세대학교 컴퓨터공학 석사</div>
+              <div>영국 플리머스대학교 방문 연구원</div>
+              <div>연세대학교 소프트웨어 종합설계 자문 및 멘토링</div>
+            </b>
+            <br />
+            <div>
+              <b>
+                <a href="https://www.linkedin.com/in/drsax" target="_blank"
+                  >LinkedIn</a
+                >
+              </b>
+            </div>
+          </div>
+          <br />
+          <h5 class="">
+            시니어 소프트웨어 엔지니어로서, 동국대학교 마르테(Marte) 연구실에서
+            김준 교수의 지도아래 <br />「웹 기반 오디오 라이브러리 개발을 통한
+            인터랙티브 웹 애플리케이션 연구」를 주제로 박사 학위를
+            취득하였다.<br />
+            현재 IT 기업에서 R&D 리더로서 웹 기술 연구를 이끌고 있으며, <br />
+            컴퓨터 음악 및 기술 연구소(Institute for Computer Music and
+            Technology) 에서도 관련 연구를 이어가고 있다.<br />
+            또한 영국 플리머스대학교에 방문 연구원으로 초청되었으며, 카네기 멜론
+            대학교에서는 “Music Technology” 를 주제로 강연을 진행하였다. <br />
+            현재 그는 연세대학교에서 멘토링 활동을 통해 차세대 연구자와 개발자
+            양성에도 기여하고 있다.
           </h5>
           <br />
           <div class="pb-1" style="color: gray">©2025 Euy Shick Hong</div>
@@ -249,6 +305,16 @@
         document.getElementById("modal01").style.display = "block";
         var captionText = document.getElementById("caption");
         captionText.innerHTML = element.alt;
+      }
+
+      function englishClick() {
+        document.getElementById("english_id").classList.add("visible");
+        document.getElementById("korean_id").classList.remove("visible");
+      }
+
+      function koreanClick() {
+        document.getElementById("korean_id").classList.add("visible");
+        document.getElementById("english_id").classList.remove("visible");
       }
     </script>
     <script>

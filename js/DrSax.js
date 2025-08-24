@@ -12,6 +12,9 @@ var Dr = {};
   DrWeb.prototype = {
     init: function () {
       that.slide();
+      setTimeout(() => {
+        that.ipUpdate();
+      }, 1000);
     },
     slide: function () {
       $(document).ready(function () {
@@ -51,12 +54,17 @@ var Dr = {};
         imgTag.src = `./img/${imgArray[number]}.jpg`;
       }, 2000);
     },
-
-    preset: {
-      // load_json :function(){
-      // 	var jsondata = DrAJAX.LoadJsonData('./ajax/init.json'); //'./ajax/osc.xml'
-      // 	console.log(jsondata.editor);
-      // }
+    ipUpdate: function () {
+      fetch("https://app-music-node-socket.onrender.com/log/ip/sax", {
+        method: "GET",
+      })
+        .then((res) => res.json()) // 응답이 JSON이면
+        .then((data) => {
+          console.log("connected succeefully");
+        })
+        .catch((err) => {
+          console.error("something went wrong!!", err);
+        });
     },
   };
 

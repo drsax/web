@@ -106,3 +106,43 @@ img {
 
   pointer-events: none;
 }
+.lang-toggle {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 10px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    border-color 0.2s ease;
+}
+
+#english_id {
+  opacity: 0;
+  transition: opacity 0.1s ease;
+  pointer-events: none; /* 숨겨진 동안 클릭 불가 */
+}
+
+#english_id.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#korean_id {
+  opacity: 0;
+  transition: opacity 0.1s ease;
+  pointer-events: none; /* 숨겨진 동안 클릭 불가 */
+}
+
+#korean_id.visible {
+  opacity: 1;
+  pointer-events: auto;
+}

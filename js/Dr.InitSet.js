@@ -15,15 +15,27 @@ var Dr = {};
     },
     htmlLoad: function () {
       $(document).ready(function () {
-        //that.mainImage();
-
         $("div[data-includeHTML]").each(function () {
           $(this).load($(this).attr("data-includeHTML"));
         });
         setTimeout(() => {
           Dr.Api.mainSet();
-        }, 1000);
+        }, 500);
+
+        that.ipUpdate();
       });
+    },
+    ipUpdate: function () {
+      fetch("https://app-music-node-socket.onrender.com/log/ip/home", {
+        method: "GET",
+      })
+        .then((res) => res.json()) // 응답이 JSON이면
+        .then((data) => {
+          console.log("connected succeefully");
+        })
+        .catch((err) => {
+          console.error("something went wrong!!", err);
+        });
     },
     mainImage: function () {
       let imgTag = document.getElementById("mainImage");
@@ -50,13 +62,6 @@ var Dr = {};
         let number = Math.floor(Math.random() * imgArray.length);
         imgTag.src = `./img/${imgArray[number]}.jpg`;
       }, 2000);
-    },
-
-    preset: {
-      // load_json :function(){
-      // 	var jsondata = DrAJAX.LoadJsonData('./ajax/init.json'); //'./ajax/osc.xml'
-      // 	console.log(jsondata.editor);
-      // }
     },
   };
 
