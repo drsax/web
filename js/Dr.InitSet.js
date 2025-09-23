@@ -18,9 +18,9 @@ var Dr = {};
         $("div[data-includeHTML]").each(function () {
           $(this).load($(this).attr("data-includeHTML"));
         });
-        setTimeout(() => {
-          Dr.Api.mainSet();
-        }, 500);
+        // setTimeout(() => {
+        //   Dr.Api.mainSet();
+        // }, 500);
 
         that.ipUpdate();
       });
