@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <title>DrHong (홍의식 박사) - Official Website</title>
   <meta charset="UTF-8" />
@@ -27,17 +27,17 @@
       document.write(
         '<link rel="stylesheet" href="../style/dr.css?check=' +
           Date.now() +
-          '">'
+          '">',
       );
     </script>
     <script>
       document.write(
-        '<script src="../js/Dr.InitSet.js?check=' + Date.now() + '"><\/script>'
+        '<script src="../js/Dr.InitSet.js?check=' + Date.now() + '"><\/script>',
       );
     </script>
     <script>
       document.write(
-        '<script src="../js/Dr.Api.js?check=' + Date.now() + '"><\/script>'
+        '<script src="../js/Dr.Api.js?check=' + Date.now() + '"><\/script>',
       );
     </script>
     <!-- <script>
@@ -175,7 +175,9 @@ and is wrapped around the whole page content, except for the footer in this exam
           <h6>
             <button
               class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off"
-              onclick="document.getElementById('subscribe').style.display='block'"
+              onclick="
+                document.getElementById('subscribe').style.display = 'block'
+              "
             >
               SUBSCRIBE
             </button>
@@ -339,7 +341,7 @@ and is wrapped around the whole page content, except for the footer in this exam
                   id="modal01"
                   class="w3-modal w3-black"
                   style="padding-top: 0"
-                  onclick="this.style.display='none'"
+                  onclick="this.style.display = 'none'"
                 >
                   <span class="w3-button w3-black w3-xlarge w3-display-topright"
                     >×</span
@@ -496,6 +498,47 @@ and is wrapped around the whole page content, except for the footer in this exam
 
           <div class="w3-white w3-margin">
             <div class="w3-container w3-padding w3-black">
+              <h4>Tags</h4>
+            </div>
+            <div class="w3-container w3-white">
+              <p>
+                <span class="w3-tag w3-black w3-margin-bottom">HCI</span>
+                <span class="w3-tag w3-black w3-margin-bottom"
+                  >AI Argumentation</span
+                >
+                <span class="w3-tag w3-black w3-margin-bottom"
+                  >Generative AI</span
+                >
+                <span class="w3-tag w3-black w3-margin-bottom"
+                  >Web Audio API</span
+                >
+                <span class="w3-tag w3-black w3-margin-bottom"
+                  >Interactive Web</span
+                >
+                <span class="w3-tag w3-black w3-margin-bottom"
+                  >Real-time Interaction</span
+                >
+              </p>
+            </div>
+          </div>
+          <hr />
+          <div class="w3-white w3-margin">
+            <div class="w3-container w3-padding w3-black">
+              <h4>Journal/Conference</h4>
+            </div>
+            <div class="w3-container w3-white">
+              <p>
+                <span class="w3-tag w3-black w3-margin-bottom">NIME</span>
+                <span class="w3-tag w3-black w3-margin-bottom">ICMC</span>
+                <span class="w3-tag w3-black w3-margin-bottom">SMC</span>
+                <span class="w3-tag w3-black w3-margin-bottom">ISMIR</span>
+              </p>
+            </div>
+          </div>
+          <hr />
+
+          <div class="w3-white w3-margin">
+            <div class="w3-container w3-padding w3-black">
               <h4>Contact</h4>
             </div>
             <div class="w3-container w3-xlarge w3-padding">
@@ -503,21 +546,6 @@ and is wrapped around the whole page content, except for the footer in this exam
             </div>
           </div>
           <hr />
-
-          <!-- Tags -->
-          <!-- <div class="w3-white w3-margin">
-            <div class="w3-container w3-padding w3-black">
-              <h4>Tags</h4>
-            </div>
-            <div class="w3-container w3-white">
-              <p>
-                <span class="w3-tag w3-black w3-margin-bottom">Fashion</span>
-                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"
-                  >New York</span>
-              </p>
-            </div>
-          </div>
-          <hr /> -->
 
           <!-- END About/Intro Menu -->
         </div>
