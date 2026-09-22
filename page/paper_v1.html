@@ -866,21 +866,16 @@ h1,h2,h3,h4,h5,h6 {
 
 </body>
 <script>
+  
     $(document).ready(function() {
     
-        $("#select_paper").on("click", function(e) {
-            e.stopPropagation();
-            $("#paper_menu").toggle();
-        });
-    
-        $("#paper_menu").on("click", function(e) {
-            e.stopPropagation();
-        });
-    
-        $(document).on("click", function() {
-            $("#paper_menu").hide();
+        $(document).on("click", function(e) {
+            if (!$(e.target).closest("#select_paper, #paper_menu").length) {
+                $("#paper_menu").hide();
+            }
         });
     
     });
+
 </script>
 </html>
