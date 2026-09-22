@@ -1,0 +1,897 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ICMT — Institute for Computer Music and Technology</title>
+  <meta name="description"
+        content="Institute for Computer Music and Technology — Research in computer music, artificial intelligence, and music technology.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
+      color: #171717;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* =========================
+       Header
+    ========================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 76px;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid #e8e8e8;
+      z-index: 1000;
+    }
+
+    .header-inner {
+      max-width: 1280px;
+      height: 100%;
+      margin: 0 auto;
+      padding: 0 32px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .brand-title {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .brand-subtitle {
+      margin-top: 4px;
+      font-size: 10px;
+      color: #777;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    nav a {
+      font-size: 14px;
+      color: #333;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #777;
+    }
+
+    /* =========================
+       Mobile Menu
+    ========================= */
+
+    .menu-button {
+      display: none;
+      border: none;
+      background: none;
+      font-size: 27px;
+      cursor: pointer;
+      color: #222;
+    }
+
+    .mobile-nav {
+      display: none;
+      position: absolute;
+      top: 76px;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      border-bottom: 1px solid #e8e8e8;
+      padding: 18px 32px 24px;
+    }
+
+    .mobile-nav a {
+      display: block;
+      padding: 10px 0;
+      font-size: 15px;
+    }
+
+    /* =========================
+       Hero
+    ========================= */
+
+    main {
+      padding-top: 76px;
+    }
+
+    .hero {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 130px 32px 120px;
+    }
+
+    .hero-label {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: #777;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      max-width: 900px;
+      font-size: clamp(42px, 6vw, 78px);
+      line-height: 1.02;
+      letter-spacing: -3px;
+      font-weight: 700;
+    }
+
+    .hero-description {
+      max-width: 680px;
+      margin-top: 32px;
+      font-size: 20px;
+      line-height: 1.65;
+      color: #555;
+    }
+
+    /* =========================
+       Sections
+    ========================= */
+
+    section {
+      border-top: 1px solid #e8e8e8;
+    }
+
+    .section-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 85px 32px;
+    }
+
+    .section-header {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 50px;
+      margin-bottom: 55px;
+    }
+
+    .section-number {
+      font-size: 12px;
+      color: #999;
+      letter-spacing: 1px;
+    }
+
+    .section-title {
+      font-size: 42px;
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+    }
+
+    .section-description {
+      max-width: 680px;
+      margin-top: 20px;
+      color: #666;
+      font-size: 17px;
+    }
+
+    /* =========================
+       People
+    ========================= */
+
+    .person {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 50px;
+      padding-top: 35px;
+      border-top: 1px solid #e8e8e8;
+    }
+
+    .person-photo {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: #eeeeee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-size: 13px;
+    }
+
+    .person-name {
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: -1px;
+    }
+
+    .person-role {
+      margin-top: 8px;
+      color: #777;
+      font-size: 15px;
+    }
+
+    .person-bio {
+      max-width: 650px;
+      margin-top: 28px;
+      font-size: 17px;
+      color: #555;
+    }
+
+    .detail-link {
+      display: inline-block;
+      margin-top: 25px;
+      font-size: 14px;
+      font-weight: 600;
+      border-bottom: 1px solid #222;
+      padding-bottom: 3px;
+    }
+
+    /* =========================
+       Research
+    ========================= */
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid #e8e8e8;
+    }
+
+    .research-item {
+      padding: 30px 25px 35px 0;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .research-item:nth-child(even) {
+      padding-left: 25px;
+      border-left: 1px solid #e8e8e8;
+    }
+
+    .research-item h3 {
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .research-item p {
+      color: #666;
+      max-width: 480px;
+    }
+
+    /* =========================
+       Projects
+    ========================= */
+
+    .project-list {
+      border-top: 1px solid #e8e8e8;
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: 260px 1fr auto;
+      gap: 40px;
+      align-items: center;
+      padding: 30px 0;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .project-year {
+      color: #999;
+      font-size: 13px;
+    }
+
+    .project h3 {
+      font-size: 23px;
+      font-weight: 500;
+    }
+
+    .project p {
+      margin-top: 5px;
+      color: #777;
+      font-size: 15px;
+    }
+
+    .project-arrow {
+      font-size: 22px;
+      color: #777;
+    }
+
+    /* =========================
+       Publications
+    ========================= */
+
+    .publication {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 40px;
+      padding: 28px 0;
+      border-top: 1px solid #e8e8e8;
+    }
+
+    .publication-year {
+      color: #999;
+      font-size: 13px;
+    }
+
+    .publication-title {
+      font-size: 19px;
+      line-height: 1.45;
+    }
+
+    .publication-meta {
+      margin-top: 7px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    /* =========================
+       Footer
+    ========================= */
+
+    footer {
+      border-top: 1px solid #e8e8e8;
+    }
+
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 50px 32px;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .footer-title {
+      font-weight: 600;
+    }
+
+    .footer-text {
+      margin-top: 5px;
+      color: #777;
+      font-size: 13px;
+    }
+
+    /* =========================
+       Responsive
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      header {
+        height: 68px;
+      }
+
+      .header-inner {
+        padding: 0 20px;
+      }
+
+      .brand-title {
+        font-size: 19px;
+      }
+
+      .brand-subtitle {
+        font-size: 9px;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .menu-button {
+        display: block;
+      }
+
+      main {
+        padding-top: 68px;
+      }
+
+      .mobile-nav {
+        top: 68px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .hero {
+        padding: 85px 20px 80px;
+      }
+
+      .hero h1 {
+        font-size: clamp(40px, 12vw, 60px);
+        letter-spacing: -2px;
+      }
+
+      .hero-description {
+        font-size: 17px;
+      }
+
+      .section-inner {
+        padding: 65px 20px;
+      }
+
+      .section-header {
+        display: block;
+        margin-bottom: 40px;
+      }
+
+      .section-number {
+        margin-bottom: 12px;
+      }
+
+      .section-title {
+        font-size: 35px;
+      }
+
+      .person {
+        display: block;
+      }
+
+      .person-photo {
+        max-width: 260px;
+        margin-bottom: 30px;
+      }
+
+      .research-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .research-item,
+      .research-item:nth-child(even) {
+        padding: 25px 0;
+        border-left: none;
+      }
+
+      .project {
+        grid-template-columns: 1fr auto;
+        gap: 10px;
+      }
+
+      .project-year {
+        grid-column: 1 / -1;
+      }
+
+      .project h3 {
+        font-size: 20px;
+      }
+
+      .publication {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .footer-inner {
+        padding: 40px 20px;
+        display: block;
+      }
+
+      .footer-text {
+        margin-top: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+
+    <a href="#top" class="brand">
+      <span class="brand-title">ICMT</span>
+      <span class="brand-subtitle">
+        Institute for Computer Music and Technology
+      </span>
+    </a>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#people">People</a>
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#publications">Publications</a>
+    </nav>
+
+    <button class="menu-button"
+            aria-label="Open menu"
+            onclick="toggleMenu()">
+      ☰
+    </button>
+
+  </div>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#people" onclick="closeMenu()">People</a>
+    <a href="#research" onclick="closeMenu()">Research</a>
+    <a href="#projects" onclick="closeMenu()">Projects</a>
+    <a href="#publications" onclick="closeMenu()">Publications</a>
+  </div>
+</header>
+
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+
+    <div class="hero-label">
+      Institute for Computer Music and Technology
+    </div>
+
+    <h1>
+      Research at the intersection of music, technology, and artificial intelligence.
+    </h1>
+
+    <p class="hero-description">
+      ICMT explores computer music, artificial intelligence,
+      music generation, and interactive music technologies.
+    </p>
+
+  </div>
+
+
+  <!-- ABOUT -->
+  <section id="about">
+
+    <div class="section-inner">
+
+      <div class="section-header">
+
+        <div class="section-number">01 — ABOUT</div>
+
+        <div>
+          <h2 class="section-title">About ICMT</h2>
+
+          <p class="section-description">
+            The Institute for Computer Music and Technology (ICMT)
+            focuses on research and development in computer music,
+            artificial intelligence, and music technology.
+          </p>
+
+          <a class="detail-link"
+             href="about.html"
+             target="_blank"
+             rel="noopener">
+            More about ICMT →
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PEOPLE -->
+  <section id="people">
+
+    <div class="section-inner">
+
+      <div class="section-header">
+
+        <div class="section-number">02 — PEOPLE</div>
+
+        <div>
+          <h2 class="section-title">People</h2>
+
+          <p class="section-description">
+            Researchers and collaborators working in computer music
+            and music technology.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="person">
+
+        <div class="person-photo">
+          PHOTO
+        </div>
+
+        <div>
+
+          <h3 class="person-name">
+            Euy Shick Hong
+          </h3>
+
+          <div class="person-role">
+            Researcher · Founder
+          </div>
+
+          <p class="person-bio">
+            Research interests include computer music,
+            artificial intelligence for music generation,
+            jazz improvisation, and web-based music technology.
+          </p>
+
+          <a class="detail-link"
+             href="people/euy-shick-hong.html"
+             target="_blank"
+             rel="noopener">
+            Profile →
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- RESEARCH -->
+  <section id="research">
+
+    <div class="section-inner">
+
+      <div class="section-header">
+
+        <div class="section-number">03 — RESEARCH</div>
+
+        <div>
+          <h2 class="section-title">Research</h2>
+
+          <p class="section-description">
+            Current research areas at ICMT.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="research-grid">
+
+        <div class="research-item">
+          <h3>AI Music Generation</h3>
+          <p>
+            Statistical and neural approaches to
+            symbolic music generation and sequence modeling.
+          </p>
+        </div>
+
+        <div class="research-item">
+          <h3>Computer Music</h3>
+          <p>
+            Computational approaches to music creation,
+            analysis, and interaction.
+          </p>
+        </div>
+
+        <div class="research-item">
+          <h3>Jazz & Improvisation</h3>
+          <p>
+            Computational support for jazz improvisation,
+            lick generation, and musical learning.
+          </p>
+        </div>
+
+        <div class="research-item">
+          <h3>Music Technology</h3>
+          <p>
+            Web-based musical applications and
+            interactive technologies for musicians.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROJECTS -->
+  <section id="projects">
+
+    <div class="section-inner">
+
+      <div class="section-header">
+
+        <div class="section-number">04 — PROJECTS</div>
+
+        <div>
+          <h2 class="section-title">Projects</h2>
+
+          <p class="section-description">
+            Selected research and development projects.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="project-list">
+
+        <a class="project"
+           href="projects/bebopbot.html"
+           target="_blank"
+           rel="noopener">
+
+          <div class="project-year">
+            2026
+          </div>
+
+          <div>
+            <h3>BebopBot</h3>
+            <p>
+              Jazz lick generator with LSTM
+            </p>
+          </div>
+
+          <div class="project-arrow">↗</div>
+
+        </a>
+
+
+        <a class="project"
+           href="projects/stochastic-sequence-generation.html"
+           target="_blank"
+           rel="noopener">
+
+          <div class="project-year">
+            2026
+          </div>
+
+          <div>
+            <h3>Stochastic Sequence Generation</h3>
+            <p>
+              Comparing LSTM and RAG for music generation
+            </p>
+          </div>
+
+          <div class="project-arrow">↗</div>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+
+    <div class="section-inner">
+
+      <div class="section-header">
+
+        <div class="section-number">05 — PUBLICATIONS</div>
+
+        <div>
+          <h2 class="section-title">Publications</h2>
+
+          <p class="section-description">
+            Selected publications and preprints.
+          </p>
+
+          <a class="detail-link"
+             href="publications.html"
+             target="_blank"
+             rel="noopener">
+            View all publications →
+          </a>
+        </div>
+
+      </div>
+
+
+      <div class="publication">
+
+        <div class="publication-year">
+          2026
+        </div>
+
+        <div>
+
+          <div class="publication-title">
+            BebopBot: Jazz Lick Generator with LSTM
+          </div>
+
+          <div class="publication-meta">
+            Euy Shick Hong
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="publication">
+
+        <div class="publication-year">
+          2026
+        </div>
+
+        <div>
+
+          <div class="publication-title">
+            A Study of Stochastic Sequence Generation:
+            Comparing LSTM and RAG
+          </div>
+
+          <div class="publication-meta">
+            Euy Shick Hong
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div>
+      <div class="footer-title">ICMT</div>
+      <div class="footer-text">
+        Institute for Computer Music and Technology
+      </div>
+    </div>
+
+    <div class="footer-text">
+      Seoul, Republic of Korea
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("mobileNav");
+
+    if (menu.style.display === "block") {
+      menu.style.display = "none";
+    } else {
+      menu.style.display = "block";
+    }
+  }
+
+  function closeMenu() {
+    document.getElementById("mobileNav").style.display = "none";
+  }
+</script>
+
+</body>
+</html>
+```
