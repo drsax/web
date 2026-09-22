@@ -1,25 +1,37 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Euy Shick Hong — Profile</title>
+  <title>Euy Shick Hong | Doctorate | Software Engineer | Researcher</title>
 
   <meta name="description"
-        content="Euy Shick Hong — Researcher and Software Engineer in Computer Music, Artificial Intelligence, Web Audio, and Interactive Music Technology.">
+        content="Euy Shick Hong — Doctorate in Multimedia, Senior Software Engineer, Tech Lead, R&D Expert, and researcher specializing in scalable frontend architecture, Web Audio, AI, and interactive multimedia systems.">
 
   <style>
     * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f7f7f7;
-      color: #222;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+      background: #f5f6f8;
+      color: #202124;
       line-height: 1.7;
     }
 
@@ -28,324 +40,443 @@
       text-decoration: none;
     }
 
-    .container {
-      width: 90%;
-      max-width: 1100px;
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      background: #111318;
+      color: white;
+      padding: 70px 20px 55px;
+    }
+
+    .hero-inner {
+      max-width: 1180px;
       margin: 0 auto;
-    }
-
-    /* Header */
-    header {
-      background: #111;
-      color: #fff;
-      padding: 70px 0 55px;
-    }
-
-    .profile-header {
       display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 40px;
+      grid-template-columns: 150px 1fr;
+      gap: 35px;
       align-items: center;
     }
 
     .profile-image {
-      width: 180px;
-      height: 220px;
-      border: 1px solid #555;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: #292d35;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #aaa;
+      color: #777;
       font-size: 14px;
-      background: #1b1b1b;
+      border: 1px solid #444;
     }
 
-    .profile-header h1 {
-      margin: 0;
+    .hero h1 {
       font-size: 42px;
-      font-weight: 500;
-      letter-spacing: -1px;
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      margin-bottom: 5px;
     }
 
-    .profile-header .korean-name {
-      font-size: 20px;
-      color: #bbb;
-      margin-top: 4px;
-    }
-
-    .profile-title {
-      margin-top: 20px;
+    .korean-name {
+      color: #aaa;
       font-size: 18px;
-      line-height: 1.8;
-      color: #ddd;
+      margin-bottom: 18px;
+    }
+
+    .hero-title {
+      font-size: 19px;
+      font-weight: 600;
+      margin-bottom: 7px;
+    }
+
+    .hero-subtitle {
+      color: #c4c7cc;
+      font-size: 16px;
+      max-width: 850px;
     }
 
     .contact {
-      margin-top: 22px;
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 24px;
+      color: #cdd0d5;
       font-size: 14px;
-      color: #bbb;
     }
 
-    /* Navigation */
-    nav {
-      background: #fff;
-      border-bottom: 1px solid #ddd;
+    .contact strong {
+      color: white;
+    }
+
+    .contact a {
+      color: #d7d9dd;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    .nav {
       position: sticky;
       top: 0;
       z-index: 100;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #ddd;
     }
 
-    nav .container {
+    .nav-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px;
       display: flex;
-      gap: 28px;
-      padding: 14px 0;
-      overflow-x: auto;
+      flex-wrap: wrap;
     }
 
-    nav a {
+    .nav a {
+      display: block;
+      padding: 15px 14px;
       font-size: 13px;
-      white-space: nowrap;
+      font-weight: 600;
       color: #555;
     }
 
-    nav a:hover {
-      color: #000;
+    .nav a:hover {
+      color: #111;
+      text-decoration: none;
     }
 
-    /* Main */
+    /* =========================
+       MAIN
+    ========================= */
+
     main {
-      padding: 60px 0 100px;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 60px 20px 100px;
     }
 
     section {
-      margin-bottom: 75px;
+      margin-bottom: 70px;
+      scroll-margin-top: 80px;
     }
 
     .section-title {
-      font-size: 26px;
-      font-weight: 500;
-      margin-bottom: 30px;
-      padding-bottom: 12px;
-      border-bottom: 2px solid #111;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 28px;
+      color: #15171a;
       letter-spacing: -0.5px;
     }
 
-    .section-subtitle {
-      font-size: 14px;
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 42px;
+      height: 3px;
+      background: #222;
+      margin-top: 10px;
+    }
+
+    /* =========================
+       SUMMARY
+    ========================= */
+
+    .summary-box {
+      background: white;
+      border: 1px solid #e1e3e6;
+      border-radius: 12px;
+      padding: 32px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+    }
+
+    .summary-box p {
+      color: #45484d;
+      font-size: 16px;
+    }
+
+    .summary-box strong {
+      color: #111;
+    }
+
+    /* =========================
+       TIMELINE
+    ========================= */
+
+    .timeline {
+      position: relative;
+      padding-left: 30px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 5px;
+      bottom: 5px;
+      width: 1px;
+      background: #d8dadd;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 38px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -29px;
+      top: 7px;
+      width: 10px;
+      height: 10px;
+      background: #222;
+      border-radius: 50%;
+    }
+
+    .timeline-item h3 {
+      font-size: 19px;
+      margin-bottom: 3px;
+      color: #17191c;
+    }
+
+    .timeline-date {
       color: #777;
-      margin-top: -20px;
-      margin-bottom: 28px;
+      font-size: 14px;
+      margin-bottom: 9px;
     }
 
-    /* Intro */
-    .intro {
-      font-size: 18px;
-      max-width: 900px;
-      color: #444;
+    .timeline-item p {
+      color: #555;
+      font-size: 15px;
     }
 
-    /* Skills */
-    .skill-list {
+    /* =========================
+       EXPERIENCE
+    ========================= */
+
+    .experience-card {
+      background: white;
+      border: 1px solid #e0e2e5;
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 22px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.025);
+    }
+
+    .experience-card h3 {
+      font-size: 21px;
+      margin-bottom: 3px;
+    }
+
+    .experience-role {
+      font-weight: 600;
+      color: #555;
+      margin-bottom: 2px;
+    }
+
+    .experience-date {
+      color: #888;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .experience-card p {
+      color: #4e5155;
+      margin-bottom: 8px;
+    }
+
+    .experience-card ul {
+      padding-left: 20px;
+      color: #4e5155;
+    }
+
+    .experience-card li {
+      margin-bottom: 6px;
+    }
+
+    /* =========================
+       SKILLS
+    ========================= */
+
+    .skills {
       display: flex;
       flex-wrap: wrap;
       gap: 9px;
     }
 
     .skill {
-      padding: 7px 13px;
-      border: 1px solid #ccc;
-      background: #fff;
+      background: white;
+      border: 1px solid #dfe1e4;
+      border-radius: 6px;
+      padding: 7px 12px;
       font-size: 13px;
+      color: #45484d;
     }
 
-    /* Education */
-    .timeline {
-      border-left: 2px solid #ddd;
-      padding-left: 28px;
+    /* =========================
+       PROJECTS
+    ========================= */
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
     }
 
-    .timeline-item {
-      position: relative;
-      margin-bottom: 30px;
+    .project-card {
+      background: white;
+      border: 1px solid #e0e2e5;
+      border-radius: 12px;
+      padding: 26px;
     }
 
-    .timeline-item::before {
-      content: "";
-      position: absolute;
-      width: 9px;
-      height: 9px;
-      background: #111;
-      border-radius: 50%;
-      left: -34px;
-      top: 9px;
-    }
-
-    .timeline-year {
-      font-size: 13px;
-      color: #777;
-      margin-bottom: 3px;
-    }
-
-    .timeline-title {
-      font-size: 17px;
-      font-weight: 600;
-    }
-
-    .timeline-description {
-      color: #666;
-      font-size: 14px;
-    }
-
-    /* Experience */
-    .experience-item {
-      background: #fff;
-      border: 1px solid #e2e2e2;
-      padding: 28px 30px;
-      margin-bottom: 24px;
-    }
-
-    .experience-item h3 {
-      margin: 0 0 5px;
+    .project-card h3 {
       font-size: 19px;
-      font-weight: 600;
+      margin-bottom: 8px;
     }
 
-    .experience-meta {
-      color: #777;
-      font-size: 13px;
-      margin-bottom: 18px;
-    }
-
-    .experience-item h4 {
-      margin: 18px 0 8px;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .experience-item ul {
-      margin: 8px 0 0 20px;
-      padding: 0;
+    .project-card p {
       color: #555;
       font-size: 14px;
     }
 
-    .experience-item li {
-      margin-bottom: 4px;
+    /* =========================
+       PUBLICATIONS
+    ========================= */
+
+    .publication-year {
+      font-size: 21px;
+      font-weight: 700;
+      margin: 30px 0 10px;
     }
 
-    /* Projects */
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+    .publication-list {
+      list-style: none;
     }
 
-    .project {
-      background: #fff;
-      border: 1px solid #e2e2e2;
-      padding: 24px;
-    }
-
-    .project h3 {
-      margin: 0 0 8px;
-      font-size: 18px;
-    }
-
-    .project p {
-      margin: 0;
-      color: #666;
+    .publication-list li {
+      background: white;
+      border-left: 3px solid #222;
+      padding: 14px 18px;
+      margin-bottom: 10px;
+      color: #4b4e52;
       font-size: 14px;
     }
 
-    .project .tech {
-      margin-top: 12px;
-      font-size: 12px;
-      color: #888;
+    .publication-list strong {
+      color: #222;
     }
 
-    /* Publications */
-    .publication {
-      padding: 20px 0;
-      border-bottom: 1px solid #ddd;
+    .pub-label {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      padding: 2px 7px;
+      margin-right: 7px;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      color: #444;
+      background: #f5f5f5;
+      vertical-align: 1px;
     }
 
-    .publication-title {
-      font-size: 16px;
+    .pub-title {
       font-weight: 600;
+      color: #222;
     }
 
-    .publication-meta {
-      margin-top: 5px;
-      font-size: 13px;
-      color: #777;
-    }
+    /* =========================
+       FOOTER
+    ========================= */
 
-    /* Thesis */
-    .thesis {
-      background: #fff;
-      border: 1px solid #e2e2e2;
-      padding: 25px 28px;
-      margin-bottom: 18px;
-    }
-
-    .thesis h3 {
-      margin: 0 0 8px;
-      font-size: 17px;
-    }
-
-    .thesis p {
-      margin: 0;
-      font-size: 14px;
-      color: #666;
-    }
-
-    /* Award / Book */
-    .simple-card {
-      background: #fff;
-      border: 1px solid #e2e2e2;
-      padding: 25px 28px;
-      margin-bottom: 18px;
-    }
-
-    .simple-card h3 {
-      margin: 0 0 6px;
-      font-size: 18px;
-    }
-
-    .simple-card p {
-      margin: 0;
-      color: #666;
-      font-size: 14px;
-    }
-
-    /* Footer */
     footer {
-      background: #111;
-      color: #888;
-      padding: 35px 0;
-      font-size: 12px;
+      background: #111318;
+      color: #aaa;
+      text-align: center;
+      padding: 35px 20px;
+      font-size: 13px;
     }
 
-    @media (max-width: 700px) {
-      .profile-header {
+    footer strong {
+      color: white;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      .hero-inner {
         grid-template-columns: 1fr;
+        text-align: center;
       }
 
       .profile-image {
-        width: 150px;
-        height: 180px;
+        margin: 0 auto;
       }
 
-      .profile-header h1 {
-        font-size: 32px;
+      .contact {
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .nav-inner {
+        justify-content: center;
+      }
+
+      .nav a {
+        padding: 11px 8px;
+        font-size: 12px;
       }
 
       .project-grid {
         grid-template-columns: 1fr;
       }
+    }
 
-      .experience-item {
-        padding: 22px;
+    @media (max-width: 520px) {
+
+      .hero {
+        padding: 50px 18px 40px;
+      }
+
+      .hero h1 {
+        font-size: 29px;
+      }
+
+      .hero-title {
+        font-size: 16px;
+      }
+
+      .contact {
+        flex-direction: column;
+        gap: 7px;
+      }
+
+      main {
+        padding: 45px 16px 70px;
+      }
+
+      .section-title {
+        font-size: 24px;
+      }
+
+      .summary-box,
+      .experience-card,
+      .project-card {
+        padding: 21px;
       }
     }
   </style>
@@ -353,1096 +484,1007 @@
 
 <body>
 
-<header>
-  <div class="container profile-header">
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero">
+
+  <div class="hero-inner">
 
     <div class="profile-image">
-      image
+      Profile Image
     </div>
 
     <div>
-      <h1>Euy Shick Hong</h1>
-      <div class="korean-name">홍의식</div>
 
-      <div class="profile-title">
-        Doctor in Multimedia<br>
-        Software Engineer<br>
-        Team Manager
+      <h1>Euy Shick Hong, Doctorate</h1>
+
+      <div class="korean-name">
+        홍의식
+      </div>
+
+      <div class="hero-title">
+        Senior Software Engineer | Tech Lead | R&amp;D Expert | React.js (8+ yrs)
+      </div>
+
+      <div class="hero-subtitle">
+        Specialized in Scalable Frontend Architecture, Web Audio,
+        AI, and Interactive Multimedia Systems
       </div>
 
       <div class="contact">
-        antaresax@gmail.com<br>
-        +82-10-8353-2784<br>
-        Born 1980
+
+        <span>
+          <strong>HomePage:</strong>
+          <a href="https://www.drhon9.com" target="_blank">
+            www.drhon9.com
+          </a>
+        </span>
+
+        <span>
+          <strong>Portfolio:</strong>
+          <a href="https://www.drhon9.com/page/works.html" target="_blank">
+            www.drhon9.com/page/works.html
+          </a>
+        </span>
+
+        <span>
+          <strong>LinkedIn:</strong>
+          <a href="https://www.linkedin.com/in/drsax/" target="_blank">
+            linkedin.com/in/drsax
+          </a>
+        </span>
+
+        <span>
+          <strong>Email:</strong>
+          <a href="mailto:antaresax@gmail.com">
+            antaresax@gmail.com
+          </a>
+        </span>
+
+        <span>
+          <strong>Location:</strong>
+          Seoul, Korea
+        </span>
+
       </div>
+
     </div>
 
   </div>
+
 </header>
 
 
-<nav>
-  <div class="container">
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav class="nav">
+
+  <div class="nav-inner">
+
+    <a href="#summary">Summary</a>
     <a href="#education">Education</a>
     <a href="#skills">Skills</a>
     <a href="#experience">Experience</a>
+    <a href="#academic">Academic</a>
     <a href="#research">Research</a>
-    <a href="#thesis">Thesis</a>
     <a href="#publications">Publications</a>
-    <a href="#projects">Projects</a>
     <a href="#awards">Awards</a>
     <a href="#book">Book</a>
+
   </div>
+
 </nav>
 
 
 <main>
 
-  <!-- INTRO -->
-  <section>
-    <div class="container">
 
-      <p class="intro">
-        Euy Shick Hong is a researcher and software engineer working across
-        computer music, interactive music technology, web audio, artificial
-        intelligence, and multimedia systems. His work combines software
-        engineering with music technology, interactive systems, and
-        computer-based musical expression.
+<!-- =========================
+     EXECUTIVE SUMMARY
+========================= -->
+
+<section id="summary">
+
+  <h2 class="section-title">
+    Executive Summary
+  </h2>
+
+  <div class="summary-box">
+
+    <p>
+      A highly accomplished
+      <strong>Senior Software Engineer, React.js (8+ yrs)</strong>
+      and <strong>Tech Lead</strong> with over 9 years of industry
+      experience and a robust academic background in
+      <strong>Multimedia Engineering and Computer Science</strong>.
+    </p>
+
+    <br>
+
+    <p>
+      Expert in building high-performance web architectures and
+      real-time interactive systems. Proven track record in leading
+      R&amp;D teams, architecting complex SDKs, and delivering innovative
+      multimedia solutions using
+      <strong>Web Audio API, Canvas, and Physical Computing</strong>.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section id="education">
+
+  <h2 class="section-title">
+    Education
+  </h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+
+      <h3>
+        Dongguk University | Doctorate in Multimedia
+      </h3>
+
+      <div class="timeline-date">
+        2015 – 2019 | Seoul, Korea
+      </div>
+
+      <p>
+        <strong>Specialization:</strong>
+        Computer Music &amp; Web-based Audio Systems
+      </p>
+
+      <p>
+        <strong>Dissertation:</strong>
+        <em>
+          A study of Interactive Web Application through Web-based Audio Library Development
+        </em>
       </p>
 
     </div>
-  </section>
 
 
-  <!-- EDUCATION -->
-  <section id="education">
-    <div class="container">
+    <div class="timeline-item">
 
-      <h2 class="section-title">Education</h2>
+      <h3>
+        Yonsei University | Master of Science in Computer Science
+      </h3>
 
-      <div class="timeline">
-
-        <div class="timeline-item">
-          <div class="timeline-year">2022</div>
-          <div class="timeline-title">
-            University of Plymouth, UK
-          </div>
-          <div class="timeline-description">
-            Invited Visiting Researcher
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-year">2010 – 2019</div>
-          <div class="timeline-title">
-            Dongguk University Graduate School
-          </div>
-          <div class="timeline-description">
-            Ph.D. in Multimedia
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-year">2018 – 2022</div>
-          <div class="timeline-title">
-            Yonsei University Graduate School of Engineering
-          </div>
-          <div class="timeline-description">
-            M.S. in Computer Engineering
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-year">2009 – 2011</div>
-          <div class="timeline-title">
-            Dongguk University Graduate School
-          </div>
-          <div class="timeline-description">
-            M.A. in Multimedia
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-year">2000 – 2008</div>
-          <div class="timeline-title">
-            Wonkwang University
-          </div>
-          <div class="timeline-description">
-            B.S. in Mechanical Engineering
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- DOCTORAL DISSERTATION -->
-  <section id="thesis">
-    <div class="container">
-
-      <h2 class="section-title">Doctoral Dissertation</h2>
-
-      <div class="thesis">
-
-        <h3>
-          A study of Interactive Web Application through Web-based Audio Library Development
-        </h3>
-
-        <p>
-          D.M.A. in Computer Music, Doctoral Dissertation, 2019
-        </p>
-
-        <p style="margin-top:12px;">
-          Web Audio API / Canvas / Node.js / JavaScript / HTML5
-        </p>
-
-      </div>
-
-      <div class="thesis">
-
-        <h3>
-          Audio-visual performance by real-time timbre analyze of saxophone
-        </h3>
-
-        <p>
-          Master Thesis, 2011
-        </p>
-
+      <div class="timeline-date">
+        2018 – 2022 | Seoul, Korea
       </div>
 
     </div>
-  </section>
 
 
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="container">
+    <div class="timeline-item">
 
-      <h2 class="section-title">Skills</h2>
+      <h3>
+        Dongguk University | Master of Science in Multimedia
+      </h3>
 
-      <div class="skill-list">
-
-        <div class="skill">JavaScript</div>
-        <div class="skill">Node.js</div>
-        <div class="skill">React.js</div>
-        <div class="skill">HTML5</div>
-        <div class="skill">Python</div>
-        <div class="skill">MySQL</div>
-        <div class="skill">PHP</div>
-        <div class="skill">TensorFlow</div>
-        <div class="skill">Keras</div>
-        <div class="skill">Max/MSP</div>
-        <div class="skill">Jitter</div>
-        <div class="skill">Processing</div>
-        <div class="skill">Arduino</div>
-        <div class="skill">Quartz Composer</div>
-        <div class="skill">SASS</div>
-        <div class="skill">RESTful API</div>
-        <div class="skill">Web Audio API</div>
-        <div class="skill">Canvas API</div>
-        <div class="skill">DrSax.js</div>
-
-      </div>
-
-      <div style="margin-top:30px;">
-
-        <h3 style="margin-bottom:12px;">Core Technologies</h3>
-
-        <p style="color:#666;">
-          Node.js, Python, PHP, MySQL, React.js, SASS, HTML5, JavaScript,
-          TensorFlow, Keras, Max/MSP, Jitter, Processing, Arduino,
-          Quartz Composer, Web Audio API, Canvas API
-        </p>
-
-        <p style="margin-top:15px;color:#666;">
-          <strong>DrSax.js</strong> — Owner and developer of a JavaScript-based
-          Web Audio library and framework.
-        </p>
-
+      <div class="timeline-date">
+        2009 – 2011 | Seoul, Korea
       </div>
 
     </div>
-  </section>
+
+  </div>
+
+</section>
 
 
-  <!-- COMPANY -->
-  <section>
-    <div class="container">
+<!-- =========================
+     TECHNICAL SKILLS
+========================= -->
 
-      <h2 class="section-title">Company & Professional Career</h2>
+<section id="skills">
 
-      <div class="timeline">
+  <h2 class="section-title">
+    Technical Skills
+  </h2>
 
-        <div class="timeline-item">
-          <div class="timeline-year">2023.06 – 2024.08</div>
-          <div class="timeline-title">
-            Futurewiz
-          </div>
-          <div class="timeline-description">
-            Software Engineer · Team Lead · Seoul, Korea
-          </div>
-        </div>
+  <div class="skills">
 
-        <div class="timeline-item">
-          <div class="timeline-year">2023.01 – 2023.05</div>
-          <div class="timeline-title">
-            Colorverse
-          </div>
-          <div class="timeline-description">
-            Software Engineer · Front-end Developer · Seoul, Korea
-          </div>
-        </div>
+    <span class="skill">JavaScript (ES6+)</span>
+    <span class="skill">TypeScript</span>
+    <span class="skill">React.js (8+ yrs)</span>
+    <span class="skill">Vue.js 2 &amp; 3</span>
+    <span class="skill">HTML5</span>
 
-        <div class="timeline-item">
-          <div class="timeline-year">2021.03 – 2022.12</div>
-          <div class="timeline-title">
-            TestWorks
-          </div>
-          <div class="timeline-description">
-            Software Engineer · R&D Team Lead · Manager · Seoul, Korea
-          </div>
-        </div>
+    <span class="skill">Node.js</span>
+    <span class="skill">Python</span>
+    <span class="skill">PHP</span>
+    <span class="skill">MySQL</span>
+    <span class="skill">RESTful API</span>
 
-        <div class="timeline-item">
-          <div class="timeline-year">2018.12 – 2021.02</div>
-          <div class="timeline-title">
-            Market Designers
-          </div>
-          <div class="timeline-description">
-            Software Engineer · Front-end Team Lead · Seoul, Korea
-          </div>
-        </div>
+    <span class="skill">Web Audio API</span>
+    <span class="skill">HTML5 Canvas</span>
+    <span class="skill">Max/MSP/Jitter</span>
+    <span class="skill">Processing</span>
+    <span class="skill">Arduino</span>
 
-        <div class="timeline-item">
-          <div class="timeline-year">2017.05 – 2018.11</div>
-          <div class="timeline-title">
-            Happy Shopping
-          </div>
-          <div class="timeline-description">
-            Software Engineer · Corporate Research Institute Director · Seoul, Korea
-          </div>
-        </div>
+    <span class="skill">TensorFlow</span>
+    <span class="skill">Keras</span>
 
-        <div class="timeline-item">
-          <div class="timeline-year">2016.11 – 2017.04</div>
-          <div class="timeline-title">
-            Maybeone
-          </div>
-          <div class="timeline-description">
-            Software Engineer · Seoul, Korea
-          </div>
-        </div>
+    <span class="skill">Redux-Saga</span>
+    <span class="skill">Redux-Thunk</span>
+    <span class="skill">SASS</span>
 
-        <div class="timeline-item">
-          <div class="timeline-year">2014.03 – 2016.12</div>
-          <div class="timeline-title">
-            MARTE Lab.
-          </div>
-          <div class="timeline-description">
-            Senior Researcher · Lecturer · Seoul, Korea
-          </div>
-        </div>
+    <span class="skill">Git</span>
+    <span class="skill">JIRA</span>
+    <span class="skill">Notion</span>
+    <span class="skill">Agile / Scrum</span>
+    <span class="skill">Axure</span>
 
-      </div>
+    <span class="skill">DrSax.js</span>
+
+  </div>
+
+  <div class="summary-box" style="margin-top:25px;">
+
+    <p>
+      Technical seminars and research activities in
+      <strong>Computer Music Technology</strong>
+      and real-time audio systems.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     WORK EXPERIENCE
+========================= -->
+
+<section id="experience">
+
+  <h2 class="section-title">
+    Work Experience
+  </h2>
+
+
+  <div class="experience-card">
+
+    <h3>
+      Aifrica
+    </h3>
+
+    <div class="experience-role">
+      AI Agent Studio Development
+    </div>
+
+    <div class="experience-date">
+      Jun 2025 – Present | Seoul, Korea
+    </div>
+
+    <ul>
+
+      <li>
+        Development of <strong>AI Agent Studio</strong>
+        for <strong>Shinhan Card</strong>.
+      </li>
+
+      <li>
+        Software development for AI agent-based services
+        and enterprise applications.
+      </li>
+
+    </ul>
+
+  </div>
+
+
+  <div class="experience-card">
+
+    <h3>
+      Aplayz
+    </h3>
+
+    <div class="experience-role">
+      Senior Software Engineer (Frontend)
+    </div>
+
+    <div class="experience-date">
+      Sep 2024 – May 2025 | Seoul, Korea
+    </div>
+
+    <ul>
+
+      <li>
+        Architected enterprise-level Web/Admin consoles using
+        <strong>Vue.js 2 &amp; 3</strong> and
+        <strong>TypeScript</strong>.
+      </li>
+
+    </ul>
+
+  </div>
+
+
+  <div class="experience-card">
+
+    <h3>
+      Futurewiz
+    </h3>
+
+    <div class="experience-role">
+      Software Engineer &amp; Team Lead
+    </div>
+
+    <div class="experience-date">
+      Jun 2023 – Aug 2024 | Seoul, Korea
+    </div>
+
+    <ul>
+
+      <li>
+        Led the engineering team for groupware solutions.
+      </li>
+
+      <li>
+        Specialized in <strong>React.js</strong> and
+        <strong>Vue.js</strong>.
+      </li>
+
+    </ul>
+
+  </div>
+
+
+  <div class="experience-card">
+
+    <h3>
+      Colorverse
+    </h3>
+
+    <div class="experience-role">
+      Software Engineer (Frontend)
+    </div>
+
+    <div class="experience-date">
+      Jan 2023 – May 2023 | Seoul, Korea
+    </div>
+
+    <ul>
+
+      <li>
+        Developed <strong>NPM Packages and SDKs</strong>
+        for scalable platform integrations.
+      </li>
+
+      <li>
+        Worked with RESTful APIs, TypeScript and modern
+        JavaScript-based frontend architecture.
+      </li>
+
+    </ul>
+
+  </div>
+
+
+  <div class="experience-card">
+
+    <h3>
+      TestWorks
+    </h3>
+
+    <div class="experience-role">
+      R&amp;D Team Lead &amp; Manager
+    </div>
+
+    <div class="experience-date">
+      Mar 2021 – Dec 2022 | Seoul, Korea
+    </div>
+
+    <ul>
+
+      <li>
+        Headed the R&amp;D team for <strong>aiworks</strong>.
+      </li>
+
+      <li>
+        Specialized in hybrid mobile applications and
+        multimedia state management using
+        <strong>Redux-Saga</strong>.
+      </li>
+
+    </ul>
+
+  </div>
+
+
+  <div class="experience-card">
+
+    <h3>
+      Market Designers
+    </h3>
+
+    <div class="experience-role">
+      Frontend Manager
+    </div>
+
+    <div class="experience-date">
+      Dec 2018 – Feb 2021 | Seoul, Korea
+    </div>
+
+    <ul>
+
+      <li>
+        Managed the frontend department.
+      </li>
+
+      <li>
+        Established a standardized
+        <strong>UI Component Library</strong>.
+      </li>
+
+    </ul>
+
+  </div>
+
+
+  <div class="experience-card">
+
+    <h3>
+      Happy Shopping
+    </h3>
+
+    <div class="experience-role">
+      Software Engineer (Web Application)
+    </div>
+
+    <div class="experience-date">
+      May 2017 – Nov 2018 | Seoul, Korea
+    </div>
+
+    <ul>
+
+      <li>
+        Developed web and mobile commerce platforms.
+      </li>
+
+      <li>
+        Integrated payment modules and social authentication.
+      </li>
+
+    </ul>
+
+  </div>
+
+
+  <div class="experience-card">
+
+    <h3>
+      Maybeone
+    </h3>
+
+    <div class="experience-role">
+      Software Engineer (Web Application)
+    </div>
+
+    <div class="experience-date">
+      Nov 2016 – Apr 2017 | Seoul, Korea
+    </div>
+
+    <ul>
+
+      <li>
+        Built a web-based image editor utilizing
+        <strong>HTML5 Canvas API</strong>.
+      </li>
+
+    </ul>
+
+  </div>
+
+
+  <div class="experience-card">
+
+    <h3>
+      MARTE Lab.
+    </h3>
+
+    <div class="experience-role">
+      Software Engineer, Researcher &amp; Lecturer
+    </div>
+
+    <div class="experience-date">
+      2015 – 2016 | Seoul, Korea
+    </div>
+
+    <ul>
+
+      <li>
+        R&amp;D on physical computing and interactive content
+        using <strong>Max/MSP</strong> and <strong>Arduino</strong>.
+      </li>
+
+      <li>
+        Developed web-based audio and interactive multimedia systems
+        using JavaScript, Web Audio API and Node.js.
+      </li>
+
+    </ul>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     ACADEMIC & RESEARCH EXPERIENCE
+========================= -->
+
+<section id="academic">
+
+  <h2 class="section-title">
+    Academic &amp; Research Experience
+  </h2>
+
+
+  <div class="experience-card">
+
+    <h3>
+      Carnegie Mellon University
+    </h3>
+
+    <div class="experience-role">
+      Invited Speaker — Computer Science and Music Technology
+    </div>
+
+    <div class="experience-date">
+      2024 | Pittsburgh, USA
+    </div>
+
+    <ul>
+
+      <li>
+        Invited speaker for activities related to
+        <strong>Computer Science and Music Technology</strong>.
+      </li>
+
+    </ul>
+
+  </div>
+
+
+  <div class="experience-card">
+
+    <h3>
+      Yonsei University
+    </h3>
+
+    <div class="experience-role">
+      Academic Mentor &amp; Thesis Advisor
+    </div>
+
+    <div class="experience-date">
+      2024 | Seoul, Korea
+    </div>
+
+    <ul>
+
+      <li>
+        Mentoring Software Integrated Design and advising
+        graduate theses in the Department of Computer Science.
+      </li>
+
+    </ul>
+
+  </div>
+
+
+  <div class="experience-card">
+
+    <h3>
+      Plymouth University
+    </h3>
+
+    <div class="experience-role">
+      Visiting Researcher
+    </div>
+
+    <div class="experience-date">
+      2022 | Plymouth, UK
+    </div>
+
+    <ul>
+
+      <li>
+        Invited visiting researcher for collaborative research
+        on advanced interactive technology and multimedia systems.
+      </li>
+
+    </ul>
+
+  </div>
+
+
+  <div class="experience-card">
+
+    <h3>
+      MARTE Lab.
+    </h3>
+
+    <div class="experience-role">
+      Researcher &amp; Lecturer
+    </div>
+
+    <div class="experience-date">
+      2015 – 2016 | Seoul, Korea
+    </div>
+
+    <ul>
+
+      <li>
+        Research and development in physical computing,
+        interactive multimedia and computer music.
+      </li>
+
+      <li>
+        Developed systems using
+        <strong>Max/MSP, Arduino, Web Audio API, JavaScript,
+        Processing.js, Quartz Composer and Node.js</strong>.
+      </li>
+
+    </ul>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     RESEARCH
+========================= -->
+
+<section id="research">
+
+  <h2 class="section-title">
+    Research &amp; Professional Projects
+  </h2>
+
+  <div class="project-grid">
+
+    <div class="project-card">
+
+      <h3>
+        BebopBot: Jazz Lick Generator with LSTM
+      </h3>
+
+      <p>
+        Web-based AI jazz lick generation system for jazz improvisation
+        learning using LSTM, Python, web technologies and Web Audio.
+      </p>
 
     </div>
-  </section>
 
 
-  <!-- DETAILED EXPERIENCE -->
-  <section id="experience">
-    <div class="container">
+    <div class="project-card">
 
-      <h2 class="section-title">Professional Experience</h2>
+      <h3>
+        A Study of Stochastic Sequence Generation: Comparing LSTM and RAG
+      </h3>
 
-
-      <!-- FUTUREWIZ -->
-      <div class="experience-item">
-
-        <h3>Futurewiz — Software Engineer / Team Lead</h3>
-
-        <div class="experience-meta">
-          2023.06 – 2024.08 · Seoul, Korea
-        </div>
-
-        <h4>Department</h4>
-        <p>Development Team · Team Lead</p>
-
-        <h4>Technologies</h4>
-        <p>React.js / Node.js / Vue.js / TypeScript / HTML5 / Git</p>
-
-        <h4>Main Responsibilities</h4>
-
-        <ul>
-          <li>Groupware development and maintenance</li>
-          <li>React.js and Vue.js development</li>
-          <li>TypeScript-based application development</li>
-          <li>ECMAScript-based development and maintenance</li>
-          <li>HTML5 API utilization</li>
-          <li>Git-based software development</li>
-        </ul>
-
-      </div>
-
-
-      <!-- COLORVERSE -->
-      <div class="experience-item">
-
-        <h3>Colorverse — Software Engineer / Front-end Developer</h3>
-
-        <div class="experience-meta">
-          2023.01 – 2023.05 · Seoul, Korea
-        </div>
-
-        <h4>Department</h4>
-        <p>Development Team</p>
-
-        <h4>Technologies</h4>
-        <p>React.js / Node.js / RESTful API / TypeScript / HTML5 / Git</p>
-
-        <h4>Main Responsibilities</h4>
-
-        <ul>
-          <li>NPM SDK and NPM package development</li>
-          <li>React.js and Node.js development</li>
-          <li>RESTful API implementation</li>
-          <li>TypeScript-based development</li>
-          <li>ECMAScript-based development and maintenance</li>
-          <li>HTML5 API utilization</li>
-          <li>Git-based software development</li>
-        </ul>
-
-      </div>
-
-
-      <!-- TESTWORKS -->
-      <div class="experience-item">
-
-        <h3>TestWorks — Software Engineer / R&D Team Lead / Manager</h3>
-
-        <div class="experience-meta">
-          2021.03.02 – 2022.12.31 · Seoul, Korea
-        </div>
-
-        <h4>Department</h4>
-        <p>Development Team · AIWorks · Tech Lead</p>
-
-        <h4>Technologies</h4>
-        <p>
-          React.js / Node.js / PHP / jQuery / JavaScript / MySQL /
-          RESTful API / Redux-Saga / SASS
-        </p>
-
-        <h4>Main Responsibilities</h4>
-
-        <ul>
-          <li>Hybrid mobile application development and maintenance</li>
-          <li>React.js, Node.js and PHP-based application development</li>
-          <li>RESTful API development</li>
-          <li>Redux-Saga utilization</li>
-          <li>ECMAScript-based development and maintenance</li>
-          <li>Multimedia control using HTML5 APIs</li>
-          <li>Responsive page and component publishing using SASS</li>
-          <li>Git-based development</li>
-        </ul>
-
-      </div>
-
-
-      <!-- MARKET DESIGNERS -->
-      <div class="experience-item">
-
-        <h3>Market Designers — Software Engineer / Front-end Team Lead</h3>
-
-        <div class="experience-meta">
-          2018.12.10 – 2021.03.01 · Seoul, Korea
-        </div>
-
-        <h4>Department</h4>
-        <p>Development Team · Front-end Team · Team Lead</p>
-
-        <h4>Technologies</h4>
-        <p>
-          React.js / SASS / jQuery / JavaScript / MySQL /
-          RESTful API / Redux-thunk
-        </p>
-
-        <h4>Main Responsibilities</h4>
-
-        <ul>
-          <li>Hybrid mobile application and web development</li>
-          <li>React.js and RESTful API development</li>
-          <li>Redux-thunk utilization</li>
-          <li>UI component development and integration</li>
-          <li>ECMAScript-based development and maintenance</li>
-          <li>Multimedia control using HTML5 APIs</li>
-          <li>Responsive page and component publishing using SASS</li>
-          <li>Git and JIRA-based project management</li>
-        </ul>
-
-      </div>
-
-
-      <!-- HAPPY SHOPPING -->
-      <div class="experience-item">
-
-        <h3>Happy Shopping — Software Engineer / Corporate Research Institute Director</h3>
-
-        <div class="experience-meta">
-          2017.05.22 – 2018.11.24 · Seoul, Korea
-        </div>
-
-        <h4>Department</h4>
-        <p>Development Team · Corporate Research Institute</p>
-
-        <h4>Technologies</h4>
-        <p>
-          React.js / SASS / jQuery / JavaScript / MySQL / Node.js /
-          RESTful API
-        </p>
-
-        <h4>Main Responsibilities</h4>
-
-        <ul>
-          <li>Web and mobile application development</li>
-          <li>React.js and RESTful API development</li>
-          <li>UI component development and integration</li>
-          <li>ECMAScript-based development and maintenance</li>
-          <li>Multimedia control using HTML5 APIs</li>
-          <li>SNS login and user registration implementation</li>
-          <li>Payment module integration and payment page implementation</li>
-          <li>Responsive web page publishing using SASS</li>
-          <li>Git and Axure-based development and planning</li>
-        </ul>
-
-      </div>
-
-
-      <!-- MAYBEONE -->
-      <div class="experience-item">
-
-        <h3>Maybeone — Software Engineer</h3>
-
-        <div class="experience-meta">
-          2016.11.28 – 2017.04.15 · Seoul, Korea
-        </div>
-
-        <h4>Department</h4>
-        <p>Development Team</p>
-
-        <h4>Technologies</h4>
-        <p>
-          jQuery / JavaScript / HTML5 / Canvas / RESTful API
-        </p>
-
-        <h4>Main Responsibilities</h4>
-
-        <ul>
-          <li>Web-based image editor development and maintenance</li>
-          <li>Content editing functions for calendars, books and albums</li>
-          <li>Image manipulation using HTML5 Canvas API</li>
-          <li>ECMAScript-based development and maintenance</li>
-          <li>RESTful API integration</li>
-        </ul>
-
-      </div>
-
-
-      <!-- MARTE LAB -->
-      <div class="experience-item">
-
-        <h3>MARTE Lab. — Senior Researcher / Lecturer</h3>
-
-        <div class="experience-meta">
-          2014.03.02 – 2016.12.31 · Seoul, Korea
-        </div>
-
-        <h4>Research Department</h4>
-        <p>MARTE Lab. · Senior Researcher · Lecturer</p>
-
-        <h4>Technologies</h4>
-
-        <p>
-          Max/MSP / Arduino / HTML5 / JavaScript /
-          Processing.js / Quartz Composer /
-          Web Audio API / Node.js
-        </p>
-
-        <h4>Main Responsibilities</h4>
-
-        <ul>
-          <li>
-            Development of hybrid saxophone interface —
-            <strong>Dr.saxophone</strong>
-          </li>
-
-          <li>
-            Development of second-generation hybrid saxophone interface —
-            <strong>Dr.saxophone 2</strong>
-          </li>
-
-          <li>
-            Development of multi-saxophone interface —
-            <strong>Telesaxophone</strong>
-          </li>
-
-          <li>
-            Development of web synthesizer applications including
-            FM, AM and subtractive synthesis
-          </li>
-
-          <li>
-            Development of Web Audio library —
-            <strong>DrSax.js</strong>
-          </li>
-
-          <li>
-            Development of web audio editor —
-            <strong>Dr.Editor</strong>
-          </li>
-
-          <li>
-            Development of mobile media-art installation system —
-            <strong>Play the Light of Monet</strong>
-          </li>
-
-          <li>
-            Development of mobile media-art installation system —
-            <strong>Composition 2017</strong>
-          </li>
-
-          <li>
-            Development of mobile web musical instrument —
-            <strong>Webxophone</strong>
-          </li>
-
-          <li>
-            Development of web and physical-computing interactive system —
-            <strong>Dr.saxoman</strong>
-          </li>
-
-          <li>
-            Development of web audio interactive system —
-            <strong>Dr.Websax</strong>
-          </li>
-
-          <li>
-            Teaching and development of interactive music and physical
-            computing content
-          </li>
-        </ul>
-
-      </div>
+      <p>
+        Research on stochastic sequence generation for music,
+        comparing LSTM and Retrieval-Augmented Generation approaches
+        for melodic generation.
+      </p>
 
     </div>
-  </section>
 
 
-  <!-- TEACHING -->
-  <section>
-    <div class="container">
+    <div class="project-card">
 
-      <h2 class="section-title">Teaching & Academic Activities</h2>
+      <h3>
+        DrSax.js
+      </h3>
 
-
-      <div class="experience-item">
-
-        <h3>Seoul Arts Center — Physical Modeling Instructor</h3>
-
-        <div class="experience-meta">
-          2016
-        </div>
-
-        <p>
-          Development and teaching of real-time interactive content
-          using Max/MSP and Arduino.
-        </p>
-
-      </div>
-
-
-      <div class="experience-item">
-
-        <h3>MMJW — Physical Modeling Instructor</h3>
-
-        <div class="experience-meta">
-          2014 – 2016
-        </div>
-
-        <p>
-          Development and teaching of real-time interactive content
-          using Max/MSP and Arduino.
-        </p>
-
-      </div>
-
-
-      <div class="experience-item">
-
-        <h3>Hoseo University — Lecturer</h3>
-
-        <div class="experience-meta">
-          2014
-        </div>
-
-        <p>
-          Computer Music — Cubase-based computer music education.
-        </p>
-
-      </div>
+      <p>
+        JavaScript-based Web Audio library and framework for
+        interactive musical instruments and real-time audio systems.
+      </p>
 
     </div>
-  </section>
 
 
-  <!-- RESEARCH -->
-  <section id="research">
-    <div class="container">
+    <div class="project-card">
 
-      <h2 class="section-title">Research Interests</h2>
+      <h3>
+        DrWebusic
+      </h3>
 
-      <div class="skill-list">
-
-        <div class="skill">Computer Music</div>
-        <div class="skill">Artificial Intelligence for Music</div>
-        <div class="skill">Music Generation</div>
-        <div class="skill">Jazz Improvisation</div>
-        <div class="skill">Web-based Music Technology</div>
-        <div class="skill">Web Audio</div>
-        <div class="skill">Interactive Music</div>
-        <div class="skill">Multimedia</div>
-        <div class="skill">Music Information Technology</div>
-        <div class="skill">Physical Computing</div>
-        <div class="skill">Interactive Audio</div>
-        <div class="skill">Saxophone Interface</div>
-
-      </div>
+      <p>
+        Real-time interactive audio system on the web using
+        Web Audio API and web technologies.
+      </p>
 
     </div>
-  </section>
 
 
-  <!-- RESEARCH PROJECTS -->
-  <section id="projects">
-    <div class="container">
+    <div class="project-card">
 
-      <h2 class="section-title">Selected Research Projects</h2>
+      <h3>
+        Webxophone
+      </h3>
 
-      <div class="project-grid">
-
-
-        <div class="project">
-
-          <h3>Dr.saxophone</h3>
-
-          <p>
-            Hybrid saxophone interface combining physical computing
-            and real-time audio processing.
-          </p>
-
-          <div class="tech">
-            Physical Computing · Max/MSP
-          </div>
-
-        </div>
-
-
-        <div class="project">
-
-          <h3>Dr.saxophone 2</h3>
-
-          <p>
-            Extended hybrid saxophone interface for interactive
-            musical performance.
-          </p>
-
-          <div class="tech">
-            Physical Computing · Max/MSP
-          </div>
-
-        </div>
-
-
-        <div class="project">
-
-          <h3>Telesaxophone</h3>
-
-          <p>
-            Multi-saxophone interface for networked and interactive
-            musical performance.
-          </p>
-
-          <div class="tech">
-            Arduino · Max/MSP
-          </div>
-
-        </div>
-
-
-        <div class="project">
-
-          <h3>DrSax.js</h3>
-
-          <p>
-            JavaScript-based Web Audio library and framework for
-            interactive audio applications.
-          </p>
-
-          <div class="tech">
-            JavaScript · Web Audio API
-          </div>
-
-        </div>
-
-
-        <div class="project">
-
-          <h3>Dr.Editor</h3>
-
-          <p>
-            Web-based audio editing system using browser-based
-            audio technologies.
-          </p>
-
-          <div class="tech">
-            JavaScript · Web Audio API
-          </div>
-
-        </div>
-
-
-        <div class="project">
-
-          <h3>Webxophone</h3>
-
-          <p>
-            Mobile web-based wind instrument application using
-            browser audio technologies.
-          </p>
-
-          <div class="tech">
-            JavaScript · Web Audio API
-          </div>
-
-        </div>
-
-
-        <div class="project">
-
-          <h3>Dr.saxoman</h3>
-
-          <p>
-            Interactive system combining web technologies,
-            physical computing, and a hybrid saxophone interface.
-          </p>
-
-          <div class="tech">
-            JavaScript · Web Audio API · Node.js · Physical Computing
-          </div>
-
-        </div>
-
-
-        <div class="project">
-
-          <h3>Dr.Websax</h3>
-
-          <p>
-            Web-based interactive audio system using the DrSax.js
-            framework.
-          </p>
-
-          <div class="tech">
-            JavaScript · DrSax.js · Node.js
-          </div>
-
-        </div>
-
-
-        <div class="project">
-
-          <h3>Play the Light of Monet</h3>
-
-          <p>
-            Mobile media-art installation system combining
-            interactive audio and visual interaction.
-          </p>
-
-          <div class="tech">
-            JavaScript · Web Audio API · Node.js
-          </div>
-
-        </div>
-
-
-        <div class="project">
-
-          <h3>Composition 2017</h3>
-
-          <p>
-            Mobile media-art installation system using web-based
-            audio and interactive technologies.
-          </p>
-
-          <div class="tech">
-            JavaScript · Web Audio API · Node.js
-          </div>
-
-        </div>
-
-
-      </div>
+      <p>
+        Web-based wind instrument utilizing Web Audio technologies
+        and mobile interaction.
+      </p>
 
     </div>
-  </section>
 
 
-  <!-- PUBLICATIONS -->
-  <section id="publications">
-    <div class="container">
+    <div class="project-card">
 
-      <h2 class="section-title">Selected Publications</h2>
+      <h3>
+        Hybrid Saxophone Interfaces
+      </h3>
 
-
-      <div class="publication">
-
-        <div class="publication-title">
-          DrWebusic : Real-time Interactive Audio System on the Web
-        </div>
-
-        <div class="publication-meta">
-          Euy Shick Hong · Journal of Digital Contents Society · 2019 · KCI
-        </div>
-
-      </div>
-
-
-      <div class="publication">
-
-        <div class="publication-title">
-          A Study of Hybrid Saxophone Interface for Interactive Networking System
-        </div>
-
-        <div class="publication-meta">
-          Euy Shick Hong, Jun Kim ·
-          Asia-pacific Journal of Multimedia Services Convergent with Art,
-          Humanities and Sociology · 2018 · KCI
-        </div>
-
-      </div>
-
-
-      <div class="publication">
-
-        <div class="publication-title">
-          Interactive Web Audio Networking System and Method with DrSax.js
-        </div>
-
-        <div class="publication-meta">
-          Euy Shick Hong, Jun Kim ·
-          The 3rd International Conference on Communication and Information ·
-          Tokyo · 2017 · SCOPUS
-        </div>
-
-      </div>
-
-
-      <div class="publication">
-
-        <div class="publication-title">
-          Play the Light of Monet: Interactive Web Audio/Visual Networking System
-        </div>
-
-        <div class="publication-meta">
-          Euy Shick Hong, Jun Kim ·
-          Proceedings of Engineering and Art Society of Korea Conference ·
-          Korea · 2017
-        </div>
-
-      </div>
-
-
-      <div class="publication">
-
-        <div class="publication-title">
-          Drsax.js: A JavaScript Based Unified Web Audio Library and Framework
-        </div>
-
-        <div class="publication-meta">
-          Euy Shick Hong, Jun Kim ·
-          International Conference on Algorithms, Computing and Systems ·
-          2017 · SCOPUS
-        </div>
-
-      </div>
-
-
-      <div class="publication">
-
-        <div class="publication-title">
-          Telesaxophone: Hybrid Saxophone Interface
-        </div>
-
-        <div class="publication-meta">
-          Euy Shick Hong, Jun Kim ·
-          International Conference on Algorithms, Computing and Systems ·
-          2017 · SCOPUS
-        </div>
-
-      </div>
-
-
-      <div class="publication">
-
-        <div class="publication-title">
-          Webxophone: Web Audio Wind Instrument
-        </div>
-
-        <div class="publication-meta">
-          Euy Shick Hong, Jun Kim ·
-          International Conference on Algorithms, Computing and Systems ·
-          2017 · SCOPUS
-        </div>
-
-      </div>
-
-
-      <div class="publication">
-
-        <div class="publication-title">
-          Dr.Saxophone: Hybrid Saxophone Interface
-        </div>
-
-        <div class="publication-meta">
-          Euy Shick Hong, Baron Kim, Kiyeor Han ·
-          The 3rd International Conference on Systems and Informatics ·
-          2016 · SCOPUS
-        </div>
-
-      </div>
-
-
-      <div class="publication">
-
-        <div class="publication-title">
-          A Study on Sound Analysis and Saxophone Technique in
-          Claudio Gabriele’s [ARRIFLEX 35]
-        </div>
-
-        <div class="publication-meta">
-          Euy Shick Hong, Jun Kim ·
-          Proceedings of Engineering and Art Society of Korea Conference ·
-          Korea · 2016
-        </div>
-
-      </div>
-
-
-      <div class="publication">
-
-        <div class="publication-title">
-          A Study on Timbre Analysis of Saxophone Sound by Different Reeds
-        </div>
-
-        <div class="publication-meta">
-          Euy Shick Hong, Jun Kim ·
-          Proceedings of Engineering and Art Society of Korea Conference ·
-          Korea · 2015
-        </div>
-
-      </div>
-
-
-      <div class="publication">
-
-        <div class="publication-title">
-          BebopBot: Jazz Lick Generator with LSTM
-        </div>
-
-        <div class="publication-meta">
-          Euy Shick Hong · Computer Music / AI Music Research
-        </div>
-
-      </div>
-
-
-      <div class="publication">
-
-        <div class="publication-title">
-          A Study of Stochastic Sequence Generation: Comparing LSTM and RAG
-        </div>
-
-        <div class="publication-meta">
-          Euy Shick Hong · AI Music Generation Research
-        </div>
-
-      </div>
+      <p>
+        Interactive saxophone systems combining physical computing,
+        sensors, Max/MSP and digital audio technologies.
+      </p>
 
     </div>
-  </section>
+
+  </div>
+
+</section>
 
 
-  <!-- AWARDS -->
-  <section id="awards">
-    <div class="container">
+<!-- =========================
+     SELECTED PUBLICATIONS
+========================= -->
 
-      <h2 class="section-title">Awards</h2>
+<section id="publications">
 
-      <div class="simple-card">
+  <h2 class="section-title">
+    Selected Publications
+  </h2>
 
-        <h3>
-          The 10th Computer Music and Sound Competition
-        </h3>
 
-        <p>
-          Silver Prize · Ulsan University · 2009
-        </p>
+  <h3 class="publication-year">
+    2026
+  </h3>
 
-      </div>
+  <ul class="publication-list">
 
+    <li>
+      <span class="pub-label">PRE-PRINT</span>
+      <span class="pub-title">
+        "BebopBot: Jazz Lick Generator with LSTM"
+      </span>
+      — Euy Shick Hong.
+    </li>
+
+    <li>
+      <span class="pub-label">PRE-PRINT</span>
+      <span class="pub-title">
+        "A Study of Stochastic Sequence Generation: Comparing LSTM and RAG"
+      </span>
+      — Euy Shick Hong.
+    </li>
+
+  </ul>
+
+
+  <h3 class="publication-year">
+    2019
+  </h3>
+
+  <ul class="publication-list">
+
+    <li>
+      <span class="pub-label">KCI</span>
+      <span class="pub-title">
+        "DrWebusic: Real-time Interactive Audio System on the Web"
+      </span>
+      — <em>Journal of Digital Contents Society</em>.
+    </li>
+
+    <li>
+      <span class="pub-label">DOCTORAL DISSERTATION</span>
+      <span class="pub-title">
+        "A Study of Interactive Web Application through Web-based Audio Library Development"
+      </span>
+      — Dongguk University.
+    </li>
+
+  </ul>
+
+
+  <h3 class="publication-year">
+    2018
+  </h3>
+
+  <ul class="publication-list">
+
+    <li>
+      <span class="pub-label">KCI</span>
+      <span class="pub-title">
+        "A Study of Hybrid Saxophone Interface for Interactive Networking System"
+      </span>
+      — <em>Asia-pacific Journal of Multimedia Services</em>.
+    </li>
+
+  </ul>
+
+
+  <h3 class="publication-year">
+    2017
+  </h3>
+
+  <ul class="publication-list">
+
+    <li>
+      <span class="pub-label">SCOPUS</span>
+      <span class="pub-title">
+        "Interactive Web Audio Networking System and Method with DrSax.js"
+      </span>
+      — <em>The 3rd International Conference on Communication and Information,
+      Tokyo University</em>.
+    </li>
+
+    <li>
+      <span class="pub-label">SCOPUS</span>
+      <span class="pub-title">
+        "Drsax.js: A JavaScript-based Unified Web Audio Library and Framework"
+      </span>
+      — <em>International Conference on Algorithms, Computing and Systems</em>.
+    </li>
+
+    <li>
+      <span class="pub-label">SCOPUS</span>
+      <span class="pub-title">
+        "Telesaxophone: Hybrid Saxophone Interface"
+      </span>
+      — <em>International Conference on Algorithms, Computing and Systems</em>.
+    </li>
+
+    <li>
+      <span class="pub-label">SCOPUS</span>
+      <span class="pub-title">
+        "Webxophone: Web Audio Wind Instrument"
+      </span>
+      — <em>International Conference on Algorithms, Computing and Systems</em>.
+    </li>
+
+    <li>
+      <span class="pub-label">CONFERENCE</span>
+      <span class="pub-title">
+        "Play the Light of Monet: Interactive Web Audio/Visual Networking System"
+      </span>
+      — <em>Engineering and Art Society of Korea</em>.
+    </li>
+
+  </ul>
+
+
+  <h3 class="publication-year">
+    2016
+  </h3>
+
+  <ul class="publication-list">
+
+    <li>
+      <span class="pub-label">SCOPUS</span>
+      <span class="pub-title">
+        "Dr.Saxophone: Hybrid Saxophone Interface"
+      </span>
+      — <em>The 3rd International Conference on Systems and Informatics (ICSAI)</em>.
+    </li>
+
+  </ul>
+
+</section>
+
+
+<!-- =========================
+     AWARDS
+========================= -->
+
+<section id="awards">
+
+  <h2 class="section-title">
+    Awards
+  </h2>
+
+  <div class="experience-card">
+
+    <h3>
+      Silver Prize
+    </h3>
+
+    <div class="experience-date">
+      2009
     </div>
-  </section>
+
+    <p>
+      The 10th Computer Music and Sound Competition,
+      Ulsan University.
+    </p>
+
+  </div>
+
+</section>
 
 
-  <!-- BOOK -->
-  <section id="book">
-    <div class="container">
+<!-- =========================
+     BOOK
+========================= -->
 
-      <h2 class="section-title">Published Book</h2>
+<section id="book">
 
-      <div class="simple-card">
+  <h2 class="section-title">
+    Published Book
+  </h2>
 
-        <h3>
-          Physical Computing with Arduino
-          <span style="font-weight:normal;">
-            (피지컬 컴퓨팅 with 아두이노)
-          </span>
-        </h3>
+  <div class="experience-card">
 
-        <p>
-          Realise Media · 2016
-        </p>
+    <h3>
+      Physical Computing with Arduino
+    </h3>
 
-        <p style="margin-top:8px;">
-          ISBN: 312-4324-431-234
-        </p>
+    <p>
+      <em>피지컬 컴퓨팅 with 아두이노</em>
+    </p>
 
-      </div>
+    <p>
+      ISBN: 312-4324-431-234
+    </p>
 
-    </div>
-  </section>
+    <p>
+      Realise Media, 2016
+    </p>
+
+  </div>
+
+</section>
 
 
 </main>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
-  <div class="container">
-    © Euy Shick Hong · Institute for Computer Music and Technology (ICMT)
-  </div>
+
+  <p>
+    <strong>Euy Shick Hong</strong>
+  </p>
+
+  <p>
+    Institute for Computer Music and Technology (ICMT)
+  </p>
+
+  <p>
+    Seoul, Republic of Korea
+  </p>
+
+  <p style="margin-top:10px;">
+    © 2026 Euy Shick Hong. All rights reserved.
+  </p>
+
 </footer>
 
 </body>
 </html>
-```
+
