@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html>
 <title>papers</title>
@@ -187,8 +187,8 @@ h1,h2,h3,h4,h5,h6 {
         <div class="w3-col m6 w3-padding-large">
 
             <h5 class="w3-center">
-                "A study of Interactive Web Application through Web-based Audio Library Development"
                 <span class="paper-label label-dissertation">DISSERTATION</span>
+                "A study of Interactive Web Application through Web-based Audio Library Development"
             </h5>
             <br>
 
@@ -262,8 +262,8 @@ h1,h2,h3,h4,h5,h6 {
         <div class="w3-col m6 w3-padding-large">
 
             <h5 class="w3-center">
-                "Audio-visual performance by real-time timbre analyze of saxophone"
                 <span class="paper-label label-thesis">THESIS</span>
+                "Audio-visual performance by real-time timbre analyze of saxophone"
             </h5>
             <br>
 
@@ -327,8 +327,8 @@ h1,h2,h3,h4,h5,h6 {
         <div class="w3-col m6 w3-padding-large">
 
             <h5 class="w3-center">
-                "DrWebusic : Real-time Interactive Audio System on the Web"
                 <span class="paper-label label-journal">JOURNAL</span>
+                "DrWebusic : Real-time Interactive Audio System on the Web"
             </h5>
             <br>
 
@@ -381,8 +381,8 @@ h1,h2,h3,h4,h5,h6 {
         <div class="w3-col m6 w3-padding-large">
 
             <h5 class="w3-center">
-                "A Study of Hybrid Saxophone Interface for Interactive Networking System"
                 <span class="paper-label label-journal">JOURNAL</span>
+                "A Study of Hybrid Saxophone Interface for Interactive Networking System"
             </h5>
             <br>
 
@@ -433,8 +433,8 @@ h1,h2,h3,h4,h5,h6 {
         <div class="w3-col m6 w3-padding-large">
 
             <h5 class="w3-center">
+                 <span class="paper-label label-conference">CONFERENCE</span>
                 "Interactive Web Audio Networking System and Method with DrSax.js"
-                <span class="paper-label label-conference">CONFERENCE</span>
             </h5>
             <br>
 
@@ -483,8 +483,8 @@ h1,h2,h3,h4,h5,h6 {
         <div class="w3-col m6 w3-padding-large">
 
             <h5 class="w3-center">
-                "Play the light of Monet : Interactive web audio/visual networking system"
                 <span class="paper-label label-conference">CONFERENCE</span>
+                "Play the light of Monet : Interactive web audio/visual networking system"
             </h5>
             <br>
 
@@ -533,8 +533,8 @@ h1,h2,h3,h4,h5,h6 {
         <div class="w3-col m6 w3-padding-large">
 
             <h5 class="w3-center">
-                "Drsax.js: a javascript based unified web audio library and framework"
                 <span class="paper-label label-conference">CONFERENCE</span>
+                "Drsax.js: a javascript based unified web audio library and framework"
             </h5>
             <br>
 
@@ -582,8 +582,8 @@ h1,h2,h3,h4,h5,h6 {
         <div class="w3-col m6 w3-padding-large">
 
             <h5 class="w3-center">
-                "Telesaxophone: hybrid Saxophone interface"
                 <span class="paper-label label-conference">CONFERENCE</span>
+                "Telesaxophone: hybrid Saxophone interface"
             </h5>
             <br>
 
@@ -632,8 +632,8 @@ h1,h2,h3,h4,h5,h6 {
         <div class="w3-col m6 w3-padding-large">
 
             <h5 class="w3-center">
-                "Webxophone: web audio wind instrument"
                 <span class="paper-label label-conference">CONFERENCE</span>
+                "Webxophone: web audio wind instrument"
             </h5>
             <br>
 
@@ -684,8 +684,8 @@ h1,h2,h3,h4,h5,h6 {
         <div class="w3-col m6 w3-padding-large">
 
             <h5 class="w3-center">
-                "Dr.Saxophone : Hybrid saxophone interface"
                 <span class="paper-label label-conference">CONFERENCE</span>
+                "Dr.Saxophone : Hybrid saxophone interface"
             </h5>
             <br>
 
@@ -732,8 +732,9 @@ h1,h2,h3,h4,h5,h6 {
         <div class="w3-col m6 w3-padding-large">
 
             <h5 class="w3-center">
-                "A study on sound analysis and saxophone technique in Claudio Gabriele’s [ARRIFLEX 35]"
                 <span class="paper-label label-conference">CONFERENCE</span>
+                "A study on sound analysis and saxophone technique in Claudio Gabriele’s [ARRIFLEX 35]"
+                
             </h5>
             <br>
 
@@ -781,8 +782,9 @@ h1,h2,h3,h4,h5,h6 {
         <div class="w3-col m6 w3-padding-large">
 
             <h5 class="w3-center">
-                "A study on timbre analysis of saxophone sound by different reeds"
                 <span class="paper-label label-conference">CONFERENCE</span>
+                "A study on timbre analysis of saxophone sound by different reeds"
+                
             </h5>
             <br>
 
@@ -830,8 +832,9 @@ h1,h2,h3,h4,h5,h6 {
         <div class="w3-col m6 w3-padding-large">
 
             <h5 class="w3-center">
-                "A study on timbre analysis of saxophone sound by different mouthpieces"
                 <span class="paper-label label-conference">CONFERENCE</span>
+                "A study on timbre analysis of saxophone sound by different mouthpieces"
+                
             </h5>
             <br>
 
@@ -862,5 +865,22 @@ h1,h2,h3,h4,h5,h6 {
 </footer>
 
 </body>
+<script>
+    $(document).ready(function() {
+    
+        $("#select_paper").on("click", function(e) {
+            e.stopPropagation();
+            $("#paper_menu").toggle();
+        });
+    
+        $("#paper_menu").on("click", function(e) {
+            e.stopPropagation();
+        });
+    
+        $(document).on("click", function() {
+            $("#paper_menu").hide();
+        });
+    
+    });
+</script>
 </html>
-```
